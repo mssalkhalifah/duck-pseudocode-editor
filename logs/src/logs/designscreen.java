@@ -5,6 +5,11 @@
 package logs;
 
 
+import javax.swing.*;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.PrintStream;
+
 public class designscreen extends javax.swing.JFrame {
 
     /**
@@ -103,7 +108,7 @@ public class designscreen extends javax.swing.JFrame {
         jTextArea1.setHighlighter(null);
         jTextArea1.setRequestFocusEnabled(false);
         jScrollPane2.setViewportView(jTextArea1);
-
+        redirectSystemStreams();
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -157,8 +162,39 @@ public class designscreen extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void updateTextArea(final String text) {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                jTextArea1.append(text);
+            }
+        });
+    }
+
+    // Redirect output
+    private void redirectSystemStreams() {
+        OutputStream out = new OutputStream() {
+            @Override
+            public void write(int b) throws IOException {
+                updateTextArea(String.valueOf((char) b));
+            }
+
+            @Override
+            public void write(byte[] b, int off, int len) throws IOException {
+                updateTextArea(new String(b, off, len));
+            }
+
+            @Override
+            public void write(byte[] b) throws IOException {
+                write(b, 0, b.length);
+            }
+        };
+
+        System.setOut(new PrintStream(out, true));
+        System.setErr(new PrintStream(out, true));
+    }
     /**
      * @param args the command line arguments
      */
