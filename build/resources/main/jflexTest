@@ -1,0 +1,10 @@
+program:
+
+    isRunning:bool = true;
+    while (isRunning):
+        output(isRunning);
+        isRunning = false;
+    endloop
+
+    output("Someone said: \\@\"LMAO\"\t\n");
+end
