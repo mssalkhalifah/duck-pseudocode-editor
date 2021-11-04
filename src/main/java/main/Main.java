@@ -1,33 +1,26 @@
 package main;
 
-import compiler.exceptions.scanner.LexerException;
-import compiler.lexer.Lexer;
+import gui.DesignScreen;
 
-import java.io.*;
+import javax.swing.*;
 
 public class Main {
-    public Main() {
 
+    private Main() {}
+
+    public static void start() {
         try {
-
-            InputStream stream = Main.class.getClassLoader().getResourceAsStream("jflexTest");
-
-            if (stream == null) {
-                throw new FileNotFoundException("Source file not found");
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
             }
-
-            Reader reader = new InputStreamReader(stream);
-            Lexer lexer = new Lexer(reader);
-
-            Lexer.Token token = lexer.yylex();
-            System.out.println(token);
-            while (token.getType() != Lexer.TokenType.ENDINPUT) {
-                token = lexer.yylex();
-                System.out.println(token);
-            }
-
-        } catch (IOException | LexerException e) {
-            e.printStackTrace();
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(DesignScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+
+        DesignScreen designscreen = new DesignScreen();
+        designscreen.setVisible(true);
     }
 }

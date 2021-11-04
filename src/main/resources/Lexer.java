@@ -7,7 +7,7 @@ package compiler.lexer;
 import compiler.exceptions.scanner.UnrecognizedCharacterException;
 
 // See https://github.com/jflex-de/jflex/issues/222
-@SuppressWarnings({"FallThrough", "all"})
+@SuppressWarnings("FallThrough")
 public class Lexer {
 
   /** This character denotes the end of file. */
@@ -677,7 +677,7 @@ public class Lexer {
    * @return the next token.
    * @exception java.io.IOException if any I/O-Error occurs.
    */
-  public Token yylex() throws java.io.IOException, UnrecognizedCharacterException {
+  public Token yylex() throws java.io.IOException {
     int zzInput;
     int zzAction;
 

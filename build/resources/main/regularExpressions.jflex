@@ -124,6 +124,14 @@ import compiler.exceptions.scanner.UnrecognizedCharacterException;
 	{Number}	{return new Token(TokenType.NUM_CONST, yytext(), yyline, yycolumn);}
 	{String} 	{return new Token(TokenType.STR_CONST, yytext(), yyline, yycolumn);}
 	{Char}		{return new Token(TokenType.CHAR_CONST, yytext(), yyline, yycolumn);}
+	
+	// Relation Operators
+	"<"		{return new Token(TokenType.LT, yytext(), yyline, yycolumn);}
+	">"		{return new Token(TokenType.GT, yytext(), yyline, yycolumn);}
+	"=="		{return new Token(TokenType.EQ, yytext(), yyline, yycolumn);}
+	">="		{return new Token(TokenType.GE, yytext(), yyline, yycolumn);}
+	"<="		{return new Token(TokenType.LE, yytext(), yyline, yycolumn);}
+	"!="		{return new Token(TokenType.NE, yytext(), yyline, yycolumn);}
 
         // Binary operations
     	"+"		{return new Token(TokenType.PLUS, yytext(), yyline, yycolumn);}

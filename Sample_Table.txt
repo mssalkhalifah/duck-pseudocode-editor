@@ -1,0 +1,8 @@
+Token:{Type: STARTINPUT, Value:program, Line: 0, Column: 0}
+Token:{Type: COLON, Value::, Line: 0, Column: 7}
+Token:{Type: OUT, Value:output, Line: 1, Column: 1}
+Token:{Type: OPENPA, Value:(, Line: 1, Column: 7}
+Token:{Type: STR_CONST, Value:"hello world", Line: 1, Column: 8}
+Token:{Type: CLOSEPA, Value:), Line: 1, Column: 21}
+Token:{Type: SEMICOL, Value:;, Line: 1, Column: 22}
+Token:{Type: ENDINPUT, Value:end, Line: 2, Column: 0}

@@ -4,26 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf08abb3-9b8b-4bcd-9ac4-ff71b3f7e4e7" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/compiler/exceptions/scanner/LexerException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/compiler/exceptions/scanner/UnrecognizedCharacterException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/compiler/lexer/fsm/recognizers/RecognizerTest.java" afterDir="false" />
+    <list default="true" id="cf08abb3-9b8b-4bcd-9ac4-ff71b3f7e4e7" name="Changes" comment="GUI embedded">
+      <change afterPath="$PROJECT_DIR$/build/resources/main/button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/logoo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/compiler/Compiler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/CompilerWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/DesignScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logoo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/s.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/lexer/Lexer$Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/lexer/Lexer$Token.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/lexer/Lexer$TokenType.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/lexer/Lexer$TokenType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/lexer/Lexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/lexer/Lexer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/main/EntryPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/main/EntryPoint.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/duck-pseudocode-editor-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/duck-pseudocode-editor-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/regularExpressions.jflex" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/regularExpressions.jflex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/compiler/lexer/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compiler/lexer/Lexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/EntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/EntryPoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jflexTest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/regularExpressions.jflex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/regularExpressions.jflex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +120,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -248,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634479033022</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Lexer functionality">
+      <created>1636054918392</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1636054918392</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -277,46 +294,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Lexer functionality" />
+    <MESSAGE value="GUI embedded" />
+    <option name="LAST_COMMIT_MESSAGE" value="GUI embedded" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/compiler/lexer/fsm/recognizers/RecognizerTest.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/compiler/lexer/fsm/recognizers/Recognizer.java</url>
           <line>16</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/compiler/lexer/fsm/recognizers/RecognizerTest.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/compiler/lexer/fsm/recognizers/IdRecognizer.java</url>
           <line>15</line>
           <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/compiler/lexer/fsm/recognizers/RecognizerTest.java</url>
-          <line>22</line>
-          <properties class="compiler.lexer.fsm.recognizers.RecognizerTest">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/compiler/lexer/fsm/recognizers/RecognizerTest.java</url>
-          <line>16</line>
-          <properties class="compiler.lexer.fsm.recognizers.RecognizerTest">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
