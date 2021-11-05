@@ -1,6 +1,6 @@
 package main;
 
-import gui.DesignScreen;
+import gui.main.Application;
 
 import javax.swing.*;
 
@@ -16,11 +16,11 @@ public class Main {
                     break;
                 }
             }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DesignScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
 
-        DesignScreen designscreen = new DesignScreen();
-        designscreen.setVisible(true);
+            Application application = new Application();
+            application.startGUI();
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Application.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
     }
 }

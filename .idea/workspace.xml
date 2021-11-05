@@ -5,33 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf08abb3-9b8b-4bcd-9ac4-ff71b3f7e4e7" name="Changes" comment="GUI embedded">
-      <change afterPath="$PROJECT_DIR$/build/resources/main/button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/logoo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/s.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/compiler/Compiler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/CompilerWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui/DesignScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logoo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/console/Console.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/console/ConsoleShortcuts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/editor/AppMenuBar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/editor/TextEditor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/main/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/util/SystemPrintCaptured.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tokenMakers.jflex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/lexer/Lexer$Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/lexer/Lexer$Token.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/lexer/Lexer$TokenType.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/lexer/Lexer$TokenType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/lexer/Lexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/lexer/Lexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/main/EntryPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/main/EntryPoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sample_Table.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sample_Table.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/DesignScreen$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/DesignScreen.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/regularExpressions.jflex" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/regularExpressions.jflex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflexTest" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/compiler/lexer/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compiler/lexer/Lexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/EntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/EntryPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/DesignScreen.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jflexTest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Lexer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/regularExpressions.jflex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/regularExpressions.jflex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +116,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TokenMakerApp" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -129,6 +129,7 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/compiler/lexer" />
+      <recent name="$PROJECT_DIR$/src/main/java/gui/editor" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/compiler/lexer/" />
       <recent name="$PROJECT_DIR$/src/main/java/compiler/lexer/fsm" />

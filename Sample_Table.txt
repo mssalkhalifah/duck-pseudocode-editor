@@ -1,8 +1,14 @@
-Token:{Type: STARTINPUT, Value:program, Line: 0, Column: 0}
-Token:{Type: COLON, Value::, Line: 0, Column: 7}
-Token:{Type: OUT, Value:output, Line: 1, Column: 1}
-Token:{Type: OPENPA, Value:(, Line: 1, Column: 7}
-Token:{Type: STR_CONST, Value:"hello world", Line: 1, Column: 8}
-Token:{Type: CLOSEPA, Value:), Line: 1, Column: 21}
-Token:{Type: SEMICOL, Value:;, Line: 1, Column: 22}
-Token:{Type: ENDINPUT, Value:end, Line: 2, Column: 0}
+Token:{Type: STARTINPUT, Value:program, Line: 3, Column: 0}
+Token:{Type: COLON, Value::, Line: 3, Column: 7}
+Token:{Type: ID, Value:hello_world, Line: 4, Column: 1}
+Token:{Type: COLON, Value::, Line: 4, Column: 12}
+Token:{Type: STR, Value:string, Line: 4, Column: 13}
+Token:{Type: ASSIGN, Value:=, Line: 4, Column: 20}
+Token:{Type: STR_CONST, Value:"Hello World", Line: 4, Column: 22}
+Token:{Type: SEMICOL, Value:;, Line: 4, Column: 35}
+Token:{Type: OUT, Value:output, Line: 5, Column: 1}
+Token:{Type: OPENPA, Value:(, Line: 5, Column: 7}
+Token:{Type: ID, Value:hello_world, Line: 5, Column: 8}
+Token:{Type: CLOSEPA, Value:), Line: 5, Column: 19}
+Token:{Type: SEMICOL, Value:;, Line: 5, Column: 20}
+Token:{Type: ENDINPUT, Value:end, Line: 6, Column: 0}

@@ -15,7 +15,7 @@ import compiler.exceptions.scanner.UnrecognizedCharacterException;
         // Identifier and constants
 	ID, NUM_CONST, STR_CONST, CHAR_CONST, BOOL_CONST, 
 	// Keywords
-	INT, FLOAT, CHAR, BOOL, STR, IF, ELSE, ENIF, WHILE, FOR, DO, ENDL, OUT, 
+	INT, FLOAT, CHAR, BOOL, STR, IF, ELSE, ENIF, WHILE, FOR, DO, ENDFOR, ENDWHILE, OUT, 
 	// Binary operations
 	    // Arithmatic operators
 	    PLUS, SUB, MUL, DIV, MOD,
@@ -70,22 +70,29 @@ import compiler.exceptions.scanner.UnrecognizedCharacterException;
 	}
     }
 %}
-    // Declerations
 
-    Letter = [a-zA-Z_]
-    Digit = [0-9]
+// Declerations
 
-    LineTerminator = [\n]
-    WhiteSpace = [ \t\f]
+Letter = [a-zA-Z_]
+Digit = [0-9]
 
-    Identifier = {Letter} ({Letter} | {Digit})*
-    Number = {Digit}{Digit}* (.{Digit}{Digit}*)?
-    Boolean = true | false
+LineTerminator = [\n]
+WhiteSpace = [ \t\f]
 
-    // String and Char
-    Characters = [^\n\r\\\"\']|\\t|\\n|\\\\|\\\"|\\\'
-    Char = \'{Characters}?\'
-    String = \"{Characters}*\"
+Identifier = {Letter} ({Letter} | {Digit})*
+Number = {Digit}{Digit}* (.{Digit}{Digit}*)?
+Boolean = true | false
+
+// String and Char
+Characters = [^\n\r\\\"\']|\\t|\\n|\\\\|\\\"|\\\'
+Char = \'{Characters}?\'
+String = \"{Characters}*\"
+
+// Comments
+TraditionalComments = "/*" [^*] ~"*/" | "/*" "*"+ "/"
+EndOfLineComment = "//" {Characters}* {LineTerminator}?
+CommentContent = ([^*] | \*+ [^/*])*
+Comment = {TraditionalComments} | {EndOfLineComment}
 
 %%
 
@@ -101,12 +108,12 @@ import compiler.exceptions.scanner.UnrecognizedCharacterException;
             <YYINITIAL> "char"		{return new Token(TokenType.CHAR, yytext(), yyline, yycolumn);}
             <YYINITIAL> "bool"		{return new Token(TokenType.BOOL, yytext(), yyline, yycolumn);}
 	    <YYINITIAL> "string"	{return new Token(TokenType.STR, yytext(), yyline, yycolumn);}
-	    <YYINITIAL> "char"		{return new Token(TokenType.CHAR, yytext(), yyline, yycolumn);}
 	// Loops
 	    <YYINITIAL> "while"		{return new Token(TokenType.WHILE, yytext(), yyline, yycolumn);}
 	    <YYINITIAL> "for" 		{return new Token(TokenType.FOR, yytext(), yyline, yycolumn);}
 	    <YYINITIAL> "do"		{return new Token(TokenType.DO, yytext(), yyline, yycolumn);}
-	    <YYINITIAL> "endloop"	{return new Token(TokenType.ENDL, yytext(), yyline, yycolumn);}
+	    <YYINITIAL> "endfor" 	{return new Token(TokenType.ENDFOR, yytext(), yyline, yycolumn);}
+	    <YYINITIAL> "endwhile" 	{return new Token(TokenType.ENDWHILE, yytext(), yyline, yycolumn);}
 	// Conditional statements
 	    <YYINITIAL> "if"		{return new Token(TokenType.IF, yytext(), yyline, yycolumn);}
 	    <YYINITIAL> "else"		{return new Token(TokenType.ELSE, yytext(), yyline, yycolumn);}
@@ -150,6 +157,7 @@ import compiler.exceptions.scanner.UnrecognizedCharacterException;
 	")"		{return new Token(TokenType.CLOSEPA, yytext(), yyline, yycolumn);}
 
 	// Delimiters
+	{Comment}		{/* Do nothing */}
 	{WhiteSpace}		{/* Do nothing */}
 	{LineTerminator}	{/* Do nothing */}
     }
