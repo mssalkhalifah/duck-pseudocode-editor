@@ -72,6 +72,7 @@ public final class TextEditor {
     private void setConsolePanelCollapsable(JComponent panelCollapsable, JButton collapseButton) {
         collapseButton.addActionListener(actionEvent -> {
             panelCollapsable.setVisible(!panelCollapsable.isVisible());
+            collapseButton.setText((panelCollapsable.isVisible() ? ">" : "<")) ;
             this.jPanel.revalidate();
             this.jPanel.repaint();
         });
