@@ -1,0 +1,14 @@
+
+%name GrxParser
+%algo CLR
+
+program = PROGRAM COLON statement END;
+program = PROGRAM COLON END;
+
+statement = ID COLON type ASSIGN expr SEMICOL;
+
+type = INT;
+type = FLOAT;
+type = STR;
+
+expr = NUM_CONST;

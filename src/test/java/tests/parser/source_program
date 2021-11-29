@@ -1,0 +1,3 @@
+program:
+    car:int = 55.5535;
+end

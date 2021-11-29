@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.parser.ParserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-27T16:29:21" hostname="mssalkhalifah" time="0.009">
+  <properties/>
+  <testcase name="parseTest()" classname="tests.parser.ParserTest" time="0.009"/>
+  <system-out><![CDATA[Source Program:
+program:
+    car:int = 55.5535;
+end
+
+Token:{Type: STARTINPUT, Value:program, Line: 0, Column: 0}
+Token:{Type: COLON, Value::, Line: 0, Column: 7}
+Token:{Type: ID, Value:car, Line: 1, Column: 4}
+Token:{Type: COLON, Value::, Line: 1, Column: 7}
+Token:{Type: INT, Value:int, Line: 1, Column: 8}
+Token:{Type: ASSIGN, Value:=, Line: 1, Column: 12}
+Token:{Type: NUM_CONST, Value:55.5535, Line: 1, Column: 14}
+Token:{Type: SEMICOL, Value:;, Line: 1, Column: 21}
+Token:{Type: ENDINPUT, Value:end, Line: 2, Column: 0}
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
