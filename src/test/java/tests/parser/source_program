@@ -1,3 +1,10 @@
 program:
-    car:int = 55.5535;
+    units:int = 100;
+    while (units > 0):
+        units = units - 1;
+        other_unit:int = 100;
+        while (other_unit > 0):
+            other_unit = other_unit - 5;
+        endwhile
+    endwhile
 end

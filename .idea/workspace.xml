@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf08abb3-9b8b-4bcd-9ac4-ff71b3f7e4e7" name="Changes" comment="Reworked GUI">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/parser/ParserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/parser/source_program" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/compiler/parser/GrxParserTableFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/compiler/parser/GrxTokenGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Grammax/GrxParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Grammax/duck_grammer.grx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -17,26 +19,34 @@
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_11_5_21,_1_29_AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_11_5_21,_1_30_AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_11_5_21__1_29_AM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_11_5_21__1_30_AM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sample_Table.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sample_Table.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/Compiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/Compiler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/compiler/lexer/fsm/recognizers/RecognizerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/compiler.lexer.fsm.recognizers.RecognizerTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$StackEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$StackEntry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/tests/parser/ParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/tests/parser/ParserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/tests.parser.ParserTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/tests.parser.ParserTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/compiler.lexer.fsm.recognizers.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-compiler.lexer.fsm.recognizers.RecognizerTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/tests.parser.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/tests.parser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/Grammax/GrxParser_debug.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/Grammax/GrxParser_debug.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/Grammax/grammer.grx" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/Grammax/grammer.grx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-tests.parser.ParserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-tests.parser.ParserTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/compiler/Compiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compiler/Compiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/compiler/parser/GrxParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compiler/parser/GrxParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Grammax/GrxParser_debug.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Grammax/GrxParser_debug.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Grammax/grammer.grx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Grammax/grammer.grx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/parser/ParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/parser/ParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/parser/source_program" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/parser/source_program" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +108,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/compiler/parser" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.09615385" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -110,14 +120,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/compiler/parser" />
       <recent name="$PROJECT_DIR$/src/main/java/compiler/lexer/fsm" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/Grammax" />
       <recent name="$PROJECT_DIR$/src/main/java/compiler/parser" />
       <recent name="$PROJECT_DIR$/src/main/java/compiler/lexer" />
       <recent name="$PROJECT_DIR$/src/main/java/gui/editor" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/main/java/compiler/lexer/" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Grammax" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.ParserTest.parseTest">

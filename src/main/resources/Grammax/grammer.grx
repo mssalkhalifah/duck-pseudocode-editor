@@ -31,7 +31,7 @@ type = BOOL;
 type = CHAR;
 
 assign_expr = conditional_expr;
-assign_expr = unary_expr assign_op assign_expr;
+assign_expr = assign_op unary_expr assign_expr;
 
 conditional_expr = logical_or_expr;
 

@@ -1,21 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.parser.ParserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-27T16:29:21" hostname="mssalkhalifah" time="0.009">
+<testsuite name="tests.parser.ParserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-30T14:17:35" hostname="Mohammads-MBP" time="0.024">
   <properties/>
-  <testcase name="parseTest()" classname="tests.parser.ParserTest" time="0.009"/>
+  <testcase name="parseTest()" classname="tests.parser.ParserTest" time="0.024"/>
   <system-out><![CDATA[Source Program:
 program:
-    car:int = 55.5535;
+    units:int = 100;
+    while (units > 0):
+        units = units - 1;
+        other_unit:int = 100;
+        while (other_unit > 0):
+            other_unit = other_unit - 5;
+        endwhile
+    endwhile
 end
 
 Token:{Type: STARTINPUT, Value:program, Line: 0, Column: 0}
 Token:{Type: COLON, Value::, Line: 0, Column: 7}
-Token:{Type: ID, Value:car, Line: 1, Column: 4}
-Token:{Type: COLON, Value::, Line: 1, Column: 7}
-Token:{Type: INT, Value:int, Line: 1, Column: 8}
-Token:{Type: ASSIGN, Value:=, Line: 1, Column: 12}
-Token:{Type: NUM_CONST, Value:55.5535, Line: 1, Column: 14}
-Token:{Type: SEMICOL, Value:;, Line: 1, Column: 21}
-Token:{Type: ENDINPUT, Value:end, Line: 2, Column: 0}
+Token:{Type: ID, Value:units, Line: 1, Column: 4}
+Token:{Type: COLON, Value::, Line: 1, Column: 9}
+Token:{Type: INT, Value:int, Line: 1, Column: 10}
+Token:{Type: ASSIGN, Value:=, Line: 1, Column: 14}
+Token:{Type: NUM_CONST, Value:100, Line: 1, Column: 16}
+Token:{Type: SEMICOL, Value:;, Line: 1, Column: 19}
+Token:{Type: WHILE, Value:while, Line: 2, Column: 4}
+Token:{Type: OPENPA, Value:(, Line: 2, Column: 10}
+Token:{Type: ID, Value:units, Line: 2, Column: 11}
+Token:{Type: GT, Value:>, Line: 2, Column: 17}
+Token:{Type: NUM_CONST, Value:0, Line: 2, Column: 19}
+Token:{Type: CLOSEPA, Value:), Line: 2, Column: 20}
+Token:{Type: COLON, Value::, Line: 2, Column: 21}
+Token:{Type: ID, Value:units, Line: 3, Column: 8}
+Token:{Type: ASSIGN, Value:=, Line: 3, Column: 14}
+Token:{Type: ID, Value:units, Line: 3, Column: 16}
+Token:{Type: SUB, Value:-, Line: 3, Column: 22}
+Token:{Type: NUM_CONST, Value:1, Line: 3, Column: 24}
+Token:{Type: SEMICOL, Value:;, Line: 3, Column: 25}
+Token:{Type: ID, Value:other_unit, Line: 4, Column: 8}
+Token:{Type: COLON, Value::, Line: 4, Column: 18}
+Token:{Type: INT, Value:int, Line: 4, Column: 19}
+Token:{Type: ASSIGN, Value:=, Line: 4, Column: 23}
+Token:{Type: NUM_CONST, Value:100, Line: 4, Column: 25}
+Token:{Type: SEMICOL, Value:;, Line: 4, Column: 28}
+Token:{Type: WHILE, Value:while, Line: 5, Column: 8}
+Token:{Type: OPENPA, Value:(, Line: 5, Column: 14}
+Token:{Type: ID, Value:other_unit, Line: 5, Column: 15}
+Token:{Type: GT, Value:>, Line: 5, Column: 26}
+Token:{Type: NUM_CONST, Value:0, Line: 5, Column: 28}
+Token:{Type: CLOSEPA, Value:), Line: 5, Column: 29}
+Token:{Type: COLON, Value::, Line: 5, Column: 30}
+Token:{Type: ID, Value:other_unit, Line: 6, Column: 12}
+Token:{Type: ASSIGN, Value:=, Line: 6, Column: 23}
+Token:{Type: ID, Value:other_unit, Line: 6, Column: 25}
+Token:{Type: SUB, Value:-, Line: 6, Column: 36}
+Token:{Type: NUM_CONST, Value:5, Line: 6, Column: 38}
+Token:{Type: SEMICOL, Value:;, Line: 6, Column: 39}
+Token:{Type: ENDWHILE, Value:endwhile, Line: 7, Column: 8}
+Token:{Type: ENDWHILE, Value:endwhile, Line: 8, Column: 4}
+Token:{Type: ENDINPUT, Value:end, Line: 9, Column: 0}
 
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

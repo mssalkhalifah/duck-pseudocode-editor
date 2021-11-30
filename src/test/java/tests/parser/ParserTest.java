@@ -15,7 +15,8 @@ public class ParserTest {
     public static void setup() throws IOException {
         String sourceProgram = Files
                 .readString(Path
-                        .of("/home/moh/Dev/duck-pseudocode-editor/src/test/java/tests/parser/source_program"));
+                        .of("/Users/mssalkhalifah/Dev/JavaProjects/" +
+                                "duck-pseudocode-editor/src/test/java/tests/parser/source_program"));
         System.out.println("Source Program:\n" + sourceProgram);
         compiler = new Compiler(sourceProgram);
     }
