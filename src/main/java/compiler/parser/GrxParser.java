@@ -5,50 +5,52 @@ import java.util.Stack;
 
 public final class GrxParser {
     public static final int T_FLOAT = 0;
-    public static final int T_ENDINPUT = 1;
-    public static final int T_STARTINPUT = 2;
-    public static final int T_LT = 3;
-    public static final int T_CHAR = 4;
-    public static final int T_DO = 5;
-    public static final int T_ASSIGN = 6;
-    public static final int T_INT = 7;
-    public static final int T_CHAR_CONST = 8;
-    public static final int T_STR = 9;
-    public static final int T_STR_CONST = 10;
-    public static final int T_ELSE = 11;
-    public static final int T_ID = 12;
-    public static final int T_IF = 13;
-    public static final int T_GE = 14;
-    public static final int T_SUB = 15;
-    public static final int T_OR = 16;
-    public static final int T_MOD = 17;
-    public static final int T_MUL = 18;
-    public static final int T_NUM_CONST = 19;
-    public static final int T_ENDFOR = 20;
-    public static final int T_ENDIF = 21;
-    public static final int T_FOR = 22;
-    public static final int T_COLON = 23;
-    public static final int T_EQ = 24;
-    public static final int T_OPENPA = 25;
-    public static final int T_GT = 26;
-    public static final int T_OUT = 27;
-    public static final int T_SEMICOL = 28;
-    public static final int T_DIV = 29;
-    public static final int T_NOT = 30;
-    public static final int T_BOOL = 31;
-    public static final int T_ENDDO = 32;
-    public static final int T_AND = 33;
-    public static final int T_NE = 34;
-    public static final int T_CLOSEPA = 35;
-    public static final int T_LE = 36;
-    public static final int T_WHILE = 37;
-    public static final int T_ENDWHILE = 38;
-    public static final int T_BOOL_CONST = 39;
-    public static final int T_PLUS = 40;
-    public static final int T_EOF = 41;
-    private static final int terminalCount = 42;
+    public static final int T_UNARY_INCREMENT = 1;
+    public static final int T_ENDINPUT = 2;
+    public static final int T_STARTINPUT = 3;
+    public static final int T_LT = 4;
+    public static final int T_CHAR = 5;
+    public static final int T_DO = 6;
+    public static final int T_ASSIGN = 7;
+    public static final int T_INT = 8;
+    public static final int T_CHAR_CONST = 9;
+    public static final int T_STR = 10;
+    public static final int T_STR_CONST = 11;
+    public static final int T_ELSE = 12;
+    public static final int T_UNARY_DECREMENT = 13;
+    public static final int T_ID = 14;
+    public static final int T_IF = 15;
+    public static final int T_GE = 16;
+    public static final int T_SUB = 17;
+    public static final int T_OR = 18;
+    public static final int T_MOD = 19;
+    public static final int T_MUL = 20;
+    public static final int T_NUM_CONST = 21;
+    public static final int T_ENIF = 22;
+    public static final int T_ENDFOR = 23;
+    public static final int T_FOR = 24;
+    public static final int T_COLON = 25;
+    public static final int T_EQ = 26;
+    public static final int T_OPENPA = 27;
+    public static final int T_GT = 28;
+    public static final int T_OUT = 29;
+    public static final int T_SEMICOL = 30;
+    public static final int T_DIV = 31;
+    public static final int T_NOT = 32;
+    public static final int T_BOOL = 33;
+    public static final int T_ENDDO = 34;
+    public static final int T_AND = 35;
+    public static final int T_NE = 36;
+    public static final int T_CLOSEPA = 37;
+    public static final int T_LE = 38;
+    public static final int T_WHILE = 39;
+    public static final int T_ENDWHILE = 40;
+    public static final int T_BOOL_CONST = 41;
+    public static final int T_PLUS = 42;
+    public static final int T_EOF = 43;
+    private static final int terminalCount = 44;
     private static final int nonTerminalCount = 25;
-    private static final int[] productionLabels = {3,6,6,1,9,9,8,8,8,8,8,18,16,16,22,22,13,13,13,21,21,10,4,4,4,4,4,2,2,5,7,7,12,12,24,24,24,11,11,11,11,11,0,0,0,17,17,17,17,14,14,23,15,19,19,20,20,20,20,20,20};
+    private static final int[] productionLabels = {3,6,6,1,9,9,8,8,8,8,8,18,16,16,22,22,13,13,13,21,21,10,4,4,4,4,4,2,2,5,7,7,12,12,24,24,24,11,11,11,11,11,0,0,0,17,17,17,17,14,14,23,15,15,15,19,19,20,20,20,20,20,20};
     private final List<Integer> actionTable;
     private final List<Integer> gotoTable;
 
@@ -487,6 +489,20 @@ public final class GrxParser {
                 _grx_stack.pop();
                 _grx_stack.pop();
                 _grx_stack.pop();
+                _grx_stack.pop();
+                return null;
+            }
+        },
+        new Reductor() {
+            @Override
+            public Object reduce(Stack<StackEntry> _grx_stack) {
+                _grx_stack.pop();
+                return null;
+            }
+        },
+        new Reductor() {
+            @Override
+            public Object reduce(Stack<StackEntry> _grx_stack) {
                 _grx_stack.pop();
                 return null;
             }

@@ -29,9 +29,8 @@ public final class Compiler {
     }
 
     public void compile() {
+        Token token = null;
         try {
-            Token token;
-
             do {
                 token = lexer.yylex();
                 lexerLogger.append(token).append('\n');
@@ -39,9 +38,10 @@ public final class Compiler {
                 parser.parse(grxToken, token);
             } while (token.getType() != TokenType.ENDINPUT);
         } catch (IOException
-                | UnrecognizedCharacterException
-                | RuntimeException e) {
+                | UnrecognizedCharacterException e) {
             e.printStackTrace();
+        } catch (RuntimeException e) {
+            System.err.printf("Syntax error: %s\n", token);
         }
     }
 }

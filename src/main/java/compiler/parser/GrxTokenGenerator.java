@@ -6,7 +6,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class GrxTokenGenerator {
+public final class GrxTokenGenerator {
     private GrxTokenGenerator() {}
 
     public static HashMap<String, Integer> generate() {

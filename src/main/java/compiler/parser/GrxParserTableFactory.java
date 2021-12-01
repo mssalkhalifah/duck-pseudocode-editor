@@ -6,6 +6,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public final class GrxParserTableFactory {
+    private GrxParserTableFactory() {}
+
     public static List<Integer> build(String tableType) {
         String path = "src/main/resources/Grammax/GrxParser.java";
 
@@ -24,7 +26,8 @@ public final class GrxParserTableFactory {
     }
 
     private static ArrayList<Integer> tableBuilder(Scanner scanner, String tableType) {
-        LinkedList<Integer> tableLL = new LinkedList<>();
+        ArrayList<Integer> tableList
+                = new ArrayList<>((tableType.equalsIgnoreCase("actionTable") ? 21462 : 12775));
         while (scanner.hasNextLine()) {
             if (scanner.nextLine().contains(tableType)) {
                 boolean eof = false;
@@ -36,14 +39,14 @@ public final class GrxParserTableFactory {
                         eof = true;
                     }
 
-                    tableLL.addAll(
+                    tableList.addAll(
                             Arrays.stream(line.split(","))
                                     .mapToInt(action -> Integer.parseInt(action.trim()))
                                     .boxed()
                                     .collect(Collectors.toList())
                     );
 
-                    if (eof) return new ArrayList<>(tableLL);
+                    if (eof) return tableList;
                 }
             }
         }

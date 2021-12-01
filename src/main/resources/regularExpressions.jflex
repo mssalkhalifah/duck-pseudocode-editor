@@ -13,9 +13,15 @@ import compiler.exceptions.scanner.UnrecognizedCharacterException;
 %{
     public enum TokenType {
         // Identifier and constants
-	ID, NUM_CONST, STR_CONST, CHAR_CONST, BOOL_CONST, 
+	ID, NUM_CONST, STR_CONST, CHAR_CONST, BOOL_CONST,
 	// Keywords
-	INT, FLOAT, CHAR, BOOL, STR, IF, ELSE, ENIF, WHILE, FOR, DO, ENDFOR, ENDWHILE, OUT, 
+	INT, FLOAT, CHAR, BOOL, STR, OUT,
+	// Select stmt keywords
+	    IF, ELSE, ENIF,
+	// Loop keywords
+	    WHILE, FOR, DO, ENDWHILE, ENDFOR, ENDO,
+    	// Unary operations
+	    UNARY_INCREMENT, UNARY_DECREMENT,
 	// Binary operations
 	    // Arithmatic operators
 	    PLUS, SUB, MUL, DIV, MOD,
@@ -27,12 +33,12 @@ import compiler.exceptions.scanner.UnrecognizedCharacterException;
 	    ASSIGN,
 	// Specials
 	    // Special characters
-	    OPENPA, CLOSEPA, COLON, SEMICOL, NEWLINE, SQUOTE, DQUOTE, 
+	    OPENPA, CLOSEPA, COLON, SEMICOL, NEWLINE, SQUOTE, DQUOTE,
 	    // Delimiters
 	    WHITESPACE, TAB,
 	    // Special tokens
 	    ENDINPUT, STARTINPUT
-	
+
     }
 
     public final class Token {
@@ -63,7 +69,7 @@ import compiler.exceptions.scanner.UnrecognizedCharacterException;
 	public int getColumnNumber() {
 	    return this.COLUMN_NUMBER;
 	}
-	
+
 	@Override
 	public String toString() {
 	    return String.format("Token:{Type: %s, Value:%s, Line: %d, Column: %d}", TYPE, VALUE, LINE_NUMBER, COLUMN_NUMBER);
@@ -80,7 +86,7 @@ LineTerminator = [\n]
 WhiteSpace = [ \t\f]
 
 Identifier = {Letter} ({Letter} | {Digit})*
-Number = {Digit}{Digit}* (.{Digit}{Digit}*)?
+Number = ([+]|[-])? {Digit}{Digit}* (.{Digit}{Digit}*)?
 Boolean = true | false
 
 // String and Char
@@ -90,8 +96,8 @@ String = \"{Characters}*\"
 
 // Comments
 TraditionalComments = "/*" [^*] ~"*/" | "/*" "*"+ "/"
-EndOfLineComment = "//" {Characters}* {LineTerminator}?
 CommentContent = ([^*] | \*+ [^/*])*
+EndOfLineComment = "//" {CommentContent} {LineTerminator}?
 Comment = {TraditionalComments} | {EndOfLineComment}
 
 %%
@@ -118,7 +124,7 @@ Comment = {TraditionalComments} | {EndOfLineComment}
 	    <YYINITIAL> "if"		{return new Token(TokenType.IF, yytext(), yyline, yycolumn);}
 	    <YYINITIAL> "else"		{return new Token(TokenType.ELSE, yytext(), yyline, yycolumn);}
 	    <YYINITIAL> "endif"		{return new Token(TokenType.ENIF, yytext(), yyline, yycolumn);}
-    
+
     // Identifiers, constants and operations
     <YYINITIAL> {
 	// Logical operators
@@ -131,7 +137,7 @@ Comment = {TraditionalComments} | {EndOfLineComment}
 	{Number}	{return new Token(TokenType.NUM_CONST, yytext(), yyline, yycolumn);}
 	{String} 	{return new Token(TokenType.STR_CONST, yytext(), yyline, yycolumn);}
 	{Char}		{return new Token(TokenType.CHAR_CONST, yytext(), yyline, yycolumn);}
-	
+
 	// Relation Operators
 	"<"		{return new Token(TokenType.LT, yytext(), yyline, yycolumn);}
 	">"		{return new Token(TokenType.GT, yytext(), yyline, yycolumn);}
@@ -146,6 +152,10 @@ Comment = {TraditionalComments} | {EndOfLineComment}
     	"*"		{return new Token(TokenType.MUL, yytext(), yyline, yycolumn);}
     	"/"		{return new Token(TokenType.DIV, yytext(), yyline, yycolumn);}
     	"%"		{return new Token(TokenType.MOD, yytext(), yyline, yycolumn);}
+
+        // Unary operations
+        "++" {return new Token(TokenType.UNARY_INCREMENT, yytext(), yyline, yycolumn);}
+        "--" {return new Token(TokenType.UNARY_DECREMENT, yytext(), yyline, yycolumn);}
 
 	// Assign operators
 	"="		{return new Token(TokenType.ASSIGN, yytext(), yyline, yycolumn);}
