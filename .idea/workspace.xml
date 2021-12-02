@@ -4,262 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf08abb3-9b8b-4bcd-9ac4-ff71b3f7e4e7" name="Changes" comment="Added a CLR parser">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/bin/jflex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/bin/jflex.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/changelog.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/doc/COPYRIGHT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/doc/fig/jflex-black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/doc/manual.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/doc/manual.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/doc/manual.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/byaccj/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/byaccj/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/byaccj/src/main/jflex/calc.flex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/byaccj/src/main/yacc/calc.y" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/common/Makefile.inc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/common/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/common/include.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/common/ivy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/build.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/main/cup/parser.cup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/main/java/AST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/main/java/STEfun.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/main/java/STEvar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/main/java/SymTab.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/main/java/SymtabEntry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/main/java/Tboolexp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/main/java/Tdekl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/main/java/Tdekllist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/main/java/Texp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/main/java/Texpinfix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/main/java/Texplist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/main/java/Tfun.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/main/java/Tident.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/main/java/Tifthenelse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/main/java/Tnumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/main/java/Tparlist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/main/java/Tprogram.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/main/java/Tuminus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/main/jflex/scanner.flex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/test/data/example.as" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/test/data/output.good" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-interpreter/src/test/java/CalcTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-java-minijava/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-java-minijava/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-java-minijava/build.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-java-minijava/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-java-minijava/src/main/cup/minijava.cup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-java-minijava/src/main/java/jflex/examples/minijava/UnknownCharacterException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-java-minijava/src/main/jflex/minijava.flex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-java-minijava/src/test/java/jflex/examples/minijava/LexerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-java/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-java/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-java/build.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-java/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-java/src/main/cup/java12.cup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-java/src/main/java/JavaParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-java/src/main/java/JavaSymbol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-java/src/main/java/TestLexer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-java/src/main/jflex/java.flex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-java/src/main/jflex/unicode.flex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-java/src/test/data/lexer-output.good" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-java/src/test/java/JavaParserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-lcalc/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-lcalc/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-lcalc/build.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-lcalc/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-lcalc/src/main/cup/ycalc.cup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-lcalc/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-lcalc/src/main/jflex/lcalc.flex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-lcalc/src/test/data/output.good" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-lcalc/src/test/data/test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/cup-lcalc/src/test/java/LexerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/simple/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/simple/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/simple/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/simple/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/simple/build.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/simple/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/simple/src/main/java/Utility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/simple/src/main/java/Yytoken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/simple/src/main/jflex/simple.flex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/simple/src/test/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/simple/src/test/data/output.good" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/simple/src/test/data/test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/simple/src/test/java/YylexTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/standalone/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/standalone/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/standalone/build.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/standalone/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/standalone/src/main/jflex/standalone.flex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/standalone/src/test/data/sample.expected" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/standalone/src/test/data/sample.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/standalone/src/test/java/de/jflex/example/standalone/SubstTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/zero-reader/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/zero-reader/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/zero-reader/build.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/zero-reader/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/zero-reader/src/main/java/FunkyReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/zero-reader/src/main/java/ZeroReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/zero-reader/src/main/jflex/zero-lexer.jflex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/zero-reader/src/test/data/lexer-output.good" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/zero-reader/src/test/data/test-input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/examples/zero-reader/src/test/java/ZeroTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/lib/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/lib/jflex-full-1.8.2.jar.asc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/lib/jflex-mode.el" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/lib/jflex.vim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/parent.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/generated/cup/jflex/core/LexParse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/generated/cup/jflex/core/sym.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/generated/jflex/jflex/core/LexScan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/config/pmd/ruleset.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/cup/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/cup/LexParse.cup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/anttask/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/anttask/JFlexTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/base/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/base/Build.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/base/IntPair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/base/Pair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/chars/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/chars/Interval.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/AbstractLexScan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/Action.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/EOFActions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/Macros.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/NFA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/OptionUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/RegExp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/RegExp1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/RegExp2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/RegExpException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/RegExps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/SemCheck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/CMapBlock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/CharClassInterval.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/CharClasses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/ILexScan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/IntCharSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/IntCharSetComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/UnicodeProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_10_0.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_11_0.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_12_0.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_12_1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_1_1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_2_0.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_2_1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_3_0.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_3_1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_3_2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_4_0.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_4_1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_5_0.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_5_1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_5_2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_6_0.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_6_1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_6_2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_6_3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_7_0.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_8_0.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_9_0.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/dfa/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/dfa/DFA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/dfa/DeprecatedDfa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/dfa/DfaFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/dfa/StatePairList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/exceptions/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/exceptions/CharClassException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/exceptions/GeneratorException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/exceptions/MacroException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/exceptions/SilentExit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/generator/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/generator/CountEmitter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/generator/Emitter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/generator/Emitters.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/generator/HiLowEmitter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/generator/LexGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/generator/PackEmitter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/gui/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/gui/GeneratorThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/gui/GridPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/gui/GridPanelConstraint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/gui/Handles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/gui/MainFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/gui/OptionsDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/io/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/io/FileUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/l10n/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/l10n/ErrorMessages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/logging/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/logging/Out.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/logging/StdOutWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/option/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/option/Options.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/performance/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/performance/Timer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/scanner/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/scanner/LexicalStates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/scanner/ScannerException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/skeleton/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/skeleton/Skeleton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/state/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/state/StateSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/java/jflex/state/StateSetEnumerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/jflex/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/jflex/LexScan.flex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/jflex/skeleton.nested" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/resources/LICENSE_JFLEX" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/resources/jflex/Messages.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/main/resources/jflex/skeleton.default" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/anttask/JFlexTaskTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/chars/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/chars/IntervalGen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/core/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/core/RegExpTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/core/unicode/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/core/unicode/CharClassesGen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/core/unicode/CharClassesQuickcheck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/core/unicode/IntCharSetGen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/core/unicode/IntCharSetQuickcheck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/core/unicode/IntCharSetTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/dfa/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/dfa/DfaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/generator/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/generator/EmitterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/generator/PackEmitterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/io/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/io/FileUtilsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/skeleton/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/skeleton/SkeletonTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/state/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/state/StateSetGen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/state/StateSetQuickcheck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/testing/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/testing/TestFileUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/unicode/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/java/jflex/unicode/UnicodePropertiesTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/resources/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/resources/jflex/LexScan-test.flex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jflex-1.8.2/src/test/resources/jflex/simple.flex" afterDir="false" />
+    <list default="true" id="cf08abb3-9b8b-4bcd-9ac4-ff71b3f7e4e7" name="Changes" comment="Added a unary op support">
+      <change afterPath="$PROJECT_DIR$/src/main/java/compiler/exceptions/semantic/InvalidTypeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/compiler/exceptions/semantic/VariableDefinedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/compiler/symboltable/SymbolTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
@@ -267,16 +15,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sample_Table.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sample_Table.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/Compiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/Compiler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/exceptions/scanner/UnrecognizedCharacterException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/exceptions/scanner/UnrecognizedCharacterException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/lexer/Lexer$Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/lexer/Lexer$Token.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/lexer/Lexer$TokenType.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/lexer/Lexer$TokenType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/lexer/Lexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/lexer/Lexer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$10.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$11.class" afterDir="false" />
@@ -335,28 +76,276 @@
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$6.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$60.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$60.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$61.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$61.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$62.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$62.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$63.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$63.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$7.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$8.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$Reductor.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$Reductor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$StackEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$StackEntry.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxTokenGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxTokenGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/factory/GrxParserTableFactory.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/Grammax/GrxParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/Grammax/GrxParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/Grammax/GrxParser_debug.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/Grammax/GrxParser_debug.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/Grammax/duck_grammer.grx" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/Grammax/duck_grammer.grx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/regularExpressions.jflex" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/regularExpressions.jflex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/bin/jflex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/bin/jflex.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/changelog.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/doc/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/doc/fig/jflex-black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/doc/manual.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/doc/manual.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/doc/manual.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/byaccj/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/byaccj/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/byaccj/src/main/jflex/calc.flex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/byaccj/src/main/yacc/calc.y" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/common/Makefile.inc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/common/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/common/include.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/common/ivy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/main/cup/parser.cup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/main/java/AST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/main/java/STEfun.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/main/java/STEvar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/main/java/SymTab.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/main/java/SymtabEntry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/main/java/Tboolexp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/main/java/Tdekl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/main/java/Tdekllist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/main/java/Texp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/main/java/Texpinfix.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/main/java/Texplist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/main/java/Tfun.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/main/java/Tident.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/main/java/Tifthenelse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/main/java/Tnumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/main/java/Tparlist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/main/java/Tprogram.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/main/java/Tuminus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/main/jflex/scanner.flex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/test/data/example.as" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/test/data/output.good" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-interpreter/src/test/java/CalcTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-java-minijava/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-java-minijava/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-java-minijava/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-java-minijava/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-java-minijava/src/main/cup/minijava.cup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-java-minijava/src/main/java/jflex/examples/minijava/UnknownCharacterException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-java-minijava/src/main/jflex/minijava.flex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-java-minijava/src/test/java/jflex/examples/minijava/LexerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-java/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-java/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-java/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-java/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-java/src/main/cup/java12.cup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-java/src/main/java/JavaParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-java/src/main/java/JavaSymbol.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-java/src/main/java/TestLexer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-java/src/main/jflex/java.flex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-java/src/main/jflex/unicode.flex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-java/src/test/data/lexer-output.good" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-java/src/test/java/JavaParserTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-lcalc/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-lcalc/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-lcalc/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-lcalc/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-lcalc/src/main/cup/ycalc.cup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-lcalc/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-lcalc/src/main/jflex/lcalc.flex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-lcalc/src/test/data/output.good" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-lcalc/src/test/data/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/cup-lcalc/src/test/java/LexerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/simple/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/simple/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/simple/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/simple/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/simple/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/simple/src/main/java/Utility.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/simple/src/main/java/Yytoken.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/simple/src/main/jflex/simple.flex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/simple/src/test/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/simple/src/test/data/output.good" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/simple/src/test/data/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/simple/src/test/java/YylexTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/standalone/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/standalone/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/standalone/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/standalone/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/standalone/src/main/jflex/standalone.flex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/standalone/src/test/data/sample.expected" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/standalone/src/test/data/sample.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/standalone/src/test/java/de/jflex/example/standalone/SubstTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/zero-reader/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/zero-reader/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/zero-reader/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/zero-reader/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/zero-reader/src/main/java/FunkyReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/zero-reader/src/main/java/ZeroReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/zero-reader/src/main/jflex/zero-lexer.jflex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/zero-reader/src/test/data/lexer-output.good" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/zero-reader/src/test/data/test-input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/examples/zero-reader/src/test/java/ZeroTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/lib/jflex-full-1.8.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/lib/jflex-full-1.8.2.jar.asc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/lib/jflex-mode.el" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/lib/jflex.vim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/parent.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/generated/cup/jflex/core/LexParse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/generated/cup/jflex/core/sym.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/generated/jflex/jflex/core/LexScan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/config/pmd/ruleset.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/cup/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/cup/LexParse.cup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/anttask/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/anttask/JFlexTask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/base/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/base/Build.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/base/IntPair.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/base/Pair.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/chars/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/chars/Interval.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/AbstractLexScan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/Action.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/EOFActions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/Macros.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/NFA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/OptionUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/RegExp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/RegExp1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/RegExp2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/RegExpException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/RegExps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/SemCheck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/CMapBlock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/CharClassInterval.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/CharClasses.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/ILexScan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/IntCharSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/IntCharSetComparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/UnicodeProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_10_0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_11_0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_12_0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_12_1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_1_1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_2_0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_2_1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_3_0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_3_1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_3_2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_4_0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_4_1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_5_0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_5_1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_5_2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_6_0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_6_1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_6_2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_6_3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_7_0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_8_0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/core/unicode/data/Unicode_9_0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/dfa/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/dfa/DFA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/dfa/DeprecatedDfa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/dfa/DfaFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/dfa/StatePairList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/exceptions/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/exceptions/CharClassException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/exceptions/GeneratorException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/exceptions/MacroException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/exceptions/SilentExit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/generator/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/generator/CountEmitter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/generator/Emitter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/generator/Emitters.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/generator/HiLowEmitter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/generator/LexGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/generator/PackEmitter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/gui/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/gui/GeneratorThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/gui/GridPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/gui/GridPanelConstraint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/gui/Handles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/gui/MainFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/gui/OptionsDialog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/io/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/io/FileUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/l10n/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/l10n/ErrorMessages.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/logging/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/logging/Out.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/logging/StdOutWriter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/option/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/option/Options.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/performance/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/performance/Timer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/scanner/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/scanner/LexicalStates.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/scanner/ScannerException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/skeleton/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/skeleton/Skeleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/state/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/state/StateSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/java/jflex/state/StateSetEnumerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/jflex/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/jflex/LexScan.flex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/jflex/skeleton.nested" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/resources/LICENSE_JFLEX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/resources/jflex/Messages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/main/resources/jflex/skeleton.default" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/anttask/JFlexTaskTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/chars/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/chars/IntervalGen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/core/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/core/RegExpTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/core/unicode/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/core/unicode/CharClassesGen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/core/unicode/CharClassesQuickcheck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/core/unicode/IntCharSetGen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/core/unicode/IntCharSetQuickcheck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/core/unicode/IntCharSetTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/dfa/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/dfa/DfaTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/generator/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/generator/EmitterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/generator/PackEmitterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/io/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/io/FileUtilsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/skeleton/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/skeleton/SkeletonTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/state/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/state/StateSetGen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/state/StateSetQuickcheck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/testing/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/testing/TestFileUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/unicode/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/java/jflex/unicode/UnicodePropertiesTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/resources/BUILD.bazel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/resources/jflex/LexScan-test.flex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/jflex-1.8.2/src/test/resources/jflex/simple.flex" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/compiler/Compiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compiler/Compiler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/compiler/exceptions/scanner/UnrecognizedCharacterException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compiler/exceptions/scanner/UnrecognizedCharacterException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/compiler/lexer/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compiler/lexer/Lexer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/compiler/parser/GrxParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compiler/parser/GrxParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/compiler/parser/GrxParserTableFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compiler/parser/GrxParserTableFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/compiler/parser/GrxTokenGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compiler/parser/GrxTokenGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Grammax/GrxParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Grammax/GrxParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Grammax/GrxParser_debug.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Grammax/GrxParser_debug.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Grammax/duck_grammer.grx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Grammax/duck_grammer.grx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/regularExpressions.jflex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/regularExpressions.jflex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -591,7 +580,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638282607018</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added a unary op support">
+      <created>1638395910695</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1638395910695</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -624,7 +620,8 @@
     <MESSAGE value="GUI embedded" />
     <MESSAGE value="Reworked GUI" />
     <MESSAGE value="Added a CLR parser" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a CLR parser" />
+    <MESSAGE value="Added a unary op support" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a unary op support" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -638,6 +635,37 @@
           <url>file://$PROJECT_DIR$/src/main/java/compiler/lexer/fsm/recognizers/IdRecognizer.java</url>
           <line>15</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/compiler/parser/GrxParser.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/compiler/symboltable/SymbolTable.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/compiler/Compiler.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/compiler/parser/GrxParser.java</url>
+          <line>87</line>
+          <properties method="reduce">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/compiler/symboltable/SymbolTable.java</url>
+          <line>35</line>
+          <properties class="compiler.symboltable.SymbolTable" method="setAttributes">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

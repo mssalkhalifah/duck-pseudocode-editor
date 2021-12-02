@@ -6,7 +6,7 @@ program = STARTINPUT COLON compound_stmt ENDINPUT;
 compound_stmt = stmt_list;
 compound_stmt = ;
 
-decl = ID COLON type ASSIGN conditional_expr SEMICOL;
+decl = ID(id) COLON type(type) ASSIGN conditional_expr(value) SEMICOL; {symbolTable.setAttribute(id, type, value);}
 
 stmt_list = statement;
 stmt_list = stmt_list statement;
