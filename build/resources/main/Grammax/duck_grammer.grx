@@ -1,18 +1,28 @@
+%top {
+  import compiler.lexer.Lexer.Token;
+}
+
 %name GrxParser
 %algo CLR
+
+%type id Token
+%type type Token
+%type value Token
+%type prime_expr Token
 
 program = STARTINPUT COLON compound_stmt ENDINPUT;
 
 compound_stmt = stmt_list;
 compound_stmt = ;
 
-decl = ID(id) COLON type(type) ASSIGN conditional_expr(value) SEMICOL; {symbolTable.setAttribute(id, type, value);}
+decl = ID(id) COLON type(type) ASSIGN conditional_expr(value) SEMICOL; 
+{v = SymbolTable.setAttributes(id, type, value);}
 
 stmt_list = statement;
 stmt_list = stmt_list statement;
 
 statement = expr_stmt;
-statement = select_stmt;
+statement = select_stmt; 
 statement = loop_stmt;
 statement = decl;
 statement = per_def_func;
@@ -22,7 +32,8 @@ per_def_func = OUT OPENPA expr CLOSEPA SEMICOL;
 expr_stmt = expr SEMICOL;
 expr_stmt = SEMICOL;
 
-select_stmt = IF OPENPA expr CLOSEPA COLON compound_stmt ENIF;
+select_stmt = IF OPENPA expr CLOSEPA COLON compound_stmt ENIF; 
+
 select_stmt = IF OPENPA expr CLOSEPA COLON compound_stmt ELSE COLON compound_stmt ENIF;
 
 loop_stmt = WHILE OPENPA expr CLOSEPA COLON compound_stmt ENDWHILE;
@@ -32,59 +43,60 @@ loop_stmt = FOR OPENPA opt_expr SEMICOL opt_expr SEMICOL opt_expr CLOSEPA COLON 
 opt_expr = expr;
 opt_expr = ;
 
-expr = assign_expr;
+expr = assign_expr(exp); {v = exp;}
 
-type = INT;
-type = STR;
-type = FLOAT;
-type = BOOL;
-type = CHAR;
+type = INT(type); {v = type;}
+type = STR(type); {v = type;}
+type = FLOAT(type); {v = type;}
+type = BOOL(type); {v = type;}
+type = CHAR(type); {v = type;}
 
-assign_expr = conditional_expr;
-assign_expr = unary_expr assign_op assign_expr;
+assign_expr = conditional_expr(exp); {v = exp;}
+assign_expr = unary_expr(unaryExp) assign_op(assignOP) assign_expr(assignExp);
+{v = SymbolTable.updateAttributes(unaryExp, assignOP, assignExp);}
 
-conditional_expr = logical_or_expr;
+conditional_expr = logical_or_expr(exp); {v = exp;}
 
-logical_or_expr = logical_and_expr;
-logical_or_expr = logical_or_expr OR logical_and_expr;
+logical_or_expr = logical_and_expr(exp); {v = exp;}
+logical_or_expr = logical_or_expr(orExp) OR logical_and_expr(andExp); {v = null;}
 
-logical_and_expr = equality_expr;
-logical_and_expr = logical_and_expr AND equality_expr;
+logical_and_expr = equality_expr(exp); {v = exp;}
+logical_and_expr = logical_and_expr(andExp) AND equality_expr(eqExp); {v = null;}
 
-equality_expr = relational_expr;
+equality_expr = relational_expr(exp); {v = exp;}
 equality_expr = equality_expr EQ relational_expr;
 equality_expr = equality_expr NE relational_expr;
 
-relational_expr = add_expr;
+relational_expr = add_expr(exp); {v = exp;}
 relational_expr = relational_expr LT add_expr;
 relational_expr = relational_expr GT add_expr;
 relational_expr = relational_expr GE add_expr;
 relational_expr = relational_expr LE add_expr;
 
-add_expr = mult_expr;
+add_expr = mult_expr(exp); {v = exp;}
 add_expr = add_expr PLUS mult_expr;
 add_expr = add_expr SUB mult_expr;
 
-mult_expr = cast_expr;
+mult_expr = cast_expr(exp); {v = exp;}
 mult_expr = mult_expr MUL cast_expr;
 mult_expr = mult_expr DIV cast_expr;
 mult_expr = mult_expr MOD cast_expr;
 
-cast_expr = unary_expr;
+cast_expr = unary_expr(exp); {v = exp;}
 cast_expr = OPENPA type CLOSEPA cast_expr;
 
-assign_op = ASSIGN;
+assign_op = ASSIGN(assign); {v = assign;}
 
-unary_op = NOT;
-unary_op = UNARY_INCREMENT;
-unary_op = UNARY_DECREMENT;
+unary_op = NOT(not); {v = not;}
+unary_op = UNARY_INCREMENT(increment); {v = increment;}
+unary_op = UNARY_DECREMENT(decrement); {v = decrement;}
 
-unary_expr = prime_expr;
+unary_expr = prime_expr(exp); {v = exp;}
 unary_expr = unary_op cast_expr;
 
-prime_expr = ID;
-prime_expr = NUM_CONST;
-prime_expr = STR_CONST;
-prime_expr = CHAR_CONST;
-prime_expr = BOOL_CONST;
-prime_expr = OPENPA expr CLOSEPA;
+prime_expr = ID(id); {v = id;}
+prime_expr = NUM_CONST(number); {v = number;}
+prime_expr = STR_CONST(string); {v = string;}
+prime_expr = CHAR_CONST(charType); {v = charType;}
+prime_expr = BOOL_CONST(bool); {v = bool;}
+prime_expr = OPENPA expr(exp) CLOSEPA; {v = exp;}

@@ -2,126 +2,216 @@ package compiler.symboltable;
 
 import compiler.exceptions.semantic.InvalidTypeException;
 import compiler.exceptions.semantic.VariableDefinedException;
-import compiler.lexer.Lexer;
+import compiler.exceptions.semantic.VariableUndefinedException;
+import compiler.lexer.Lexer.Token;
+import compiler.lexer.Lexer.TokenType;
+import utils.PrettyPrintingMap;
 
+import java.util.ArrayDeque;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Queue;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class SymbolTable {
-    private static class Symbol {
-        int lineNumber;
-        Lexer.TokenType type;
-        Object value;
+    private static final ScopeNode root = new ScopeNode("Root");
+    private static ScopeNode currentNode = root;
 
-        public Symbol(int lineNumber) {
-            this.lineNumber = lineNumber;
+    private SymbolTable() {}
+
+    public static void addScope(String newScopeLabel) {
+        ScopeNode newScopeNode = new ScopeNode(newScopeLabel);
+        newScopeNode.setParent(currentNode);
+        currentNode.addChild(newScopeNode);
+        currentNode = newScopeNode;
+    }
+
+    public static void exitCurrentScope() {
+        currentNode = currentNode.getParent();
+    }
+
+    public static void addSymbol(Token idToken) {
+        if (idToken.getType() != TokenType.ID) throw new IllegalArgumentException("Expected ID token");
+
+        if (!currentNode.getSymbolTable().containsKey(idToken.getValue())) {
+            currentNode.getSymbolTable().put(idToken.getValue(), new Symbol(idToken.getLineNumber()));
         }
     }
 
-    private static final HashMap<String, Symbol> symbolTable = new HashMap<>();
+    public static Token initAttributes(Token idToken, Token typeToken, Token valueToken)
+            throws VariableDefinedException, InvalidTypeException, VariableUndefinedException {
+        ScopeNode currentScopeNode = getCurrentValidScopeNode(idToken);
+        Symbol currentSymbol = currentScopeNode.getSymbolTable().get(idToken.getValue());
 
-    public static void addSymbol(Lexer.Token token) throws VariableDefinedException {
-        if (token.getType() != Lexer.TokenType.ID) throw new IllegalArgumentException("Expected ID token");
+        if (currentSymbol.type != null)
+            throw new VariableDefinedException(idToken.getValue(), currentSymbol.lineNumber + 1);
 
-        if (!symbolTable.containsKey(token.getValue())) {
-            symbolTable.put(token.getValue(), new Symbol(token.getLineNumber()));
-        } else if (
-                symbolTable.get(token.getValue()).value != null
-                        && symbolTable.get(token.getValue()).type !=null) {
-            throw new VariableDefinedException(token.getValue(), symbolTable.get(token.getValue()).lineNumber);
+        currentSymbol.type = typeToken.getType();
+
+        if (valueToken.getType() == TokenType.ID) {
+            setValueIdToken(currentScopeNode, idToken, valueToken, typeToken.getType());
         } else {
-            throw new RuntimeException("Unexpected error");
+            setValue(currentSymbol, typeToken.getType(), valueToken);
         }
+
+        return idToken;
     }
 
-    public static void setAttributes(Lexer.Token idToken, Lexer.Token typeToken, Lexer.Token valueToken)
+    public static Token updateAttribute(Token idToken, Token assignOP, Token valueToken)
+            throws VariableUndefinedException, InvalidTypeException {
+        ScopeNode currentScopeNode = getCurrentValidScopeNode(idToken);
+        Symbol currentSymbol = currentScopeNode.getSymbolTable().get(idToken.getValue());
+
+        if (currentSymbol.type == null)
+            throw new VariableUndefinedException(idToken.getValue(), idToken.getLineNumber() + 1);
+
+        if (assignOP.getType() != TokenType.ASSIGN)
+            throw new IllegalArgumentException("Invalid assign operator");
+
+        if (valueToken.getType() == TokenType.ID) {
+            setValueIdToken(currentScopeNode, idToken, valueToken, currentSymbol.type);
+        } else {
+            setValue(currentSymbol, currentSymbol.type, valueToken);
+        }
+
+        return idToken;
+    }
+
+    private static ScopeNode getCurrentValidScopeNode(Token idToken) throws VariableUndefinedException {
+        if (idToken.getType() != TokenType.ID) throw new IllegalArgumentException("Expected ID token");
+
+        ScopeNode currentScopeNode = getTokenTraversal(currentNode, idToken);
+
+        if (!currentScopeNode.getSymbolTable().containsKey(idToken.getValue()))
+            //throw new IllegalArgumentException(String.format("Token %s does not exist", idToken));
+            throw new VariableUndefinedException(idToken.getValue(), idToken.getLineNumber() + 1);
+
+        return currentScopeNode;
+    }
+
+    private static ScopeNode getTokenTraversal(ScopeNode currentNode, Token key) {
+        if (currentNode.getParent() == null || currentNode.getSymbolTable().containsKey(key.getValue())) {
+            return currentNode;
+        }
+
+        return getTokenTraversal(currentNode.getParent(), key);
+    }
+
+    private static void setValue(Symbol currentSymbol, TokenType type, Token valueToken)
             throws InvalidTypeException {
-        if (idToken.getType() != Lexer.TokenType.ID) throw new IllegalArgumentException("Expected ID token");
-        if (!symbolTable.containsKey(idToken.getValue()))
-            throw new IllegalArgumentException(String.format("Symbol table does not have %s", idToken.getValue()));
-
-        switch (typeToken.getType()) {
-            case INT: {
-                if (valueToken.getType() == Lexer.TokenType.ID) {
-                    setAttributeIdToken(idToken, valueToken, Lexer.TokenType.INT);
-                    return;
-                }
-
+        switch (type) {
+            case INT:{
                 try {
-                    Object value = Integer.parseInt(valueToken.getValue());
-                    symbolTable.get(idToken.getValue()).type = typeToken.getType();
-                    symbolTable.get(idToken.getValue()).value = value;
+                    currentSymbol.value = Integer.parseInt(valueToken.getValue());
                 } catch (NumberFormatException e) {
-                    throw new InvalidTypeException(valueToken.getType().toString(), "int", valueToken.getLineNumber());
-                }
-            }
-            case FLOAT: {
-                if (valueToken.getType() == Lexer.TokenType.ID) {
-                    setAttributeIdToken(idToken, valueToken, Lexer.TokenType.FLOAT);
-                    return;
-                }
-
-                try {
-                    Object value = Float.parseFloat(valueToken.getValue());
-                    symbolTable.get(idToken.getValue()).type = typeToken.getType();
-                    symbolTable.get(idToken.getValue()).value = value;
-                } catch (NumberFormatException e) {
-                    throw new
-                            InvalidTypeException(valueToken.getType().toString(), "float", valueToken.getLineNumber());
-                }
-            }
-            case STR: {
-                if (valueToken.getType() == Lexer.TokenType.ID) {
-                    setAttributeIdToken(idToken, valueToken, Lexer.TokenType.STR);
-                    return;
-                }
-
-                if (valueToken.getType() != Lexer.TokenType.STR_CONST)
                     throw new InvalidTypeException(
-                            valueToken.getType().toString(), "string", valueToken.getLineNumber());
-
-                symbolTable.get(idToken.getValue()).value = valueToken.getValue();
-            }
-            case CHAR: {
-                if (valueToken.getType() == Lexer.TokenType.ID) {
-                    setAttributeIdToken(idToken, valueToken, Lexer.TokenType.CHAR);
-                    return;
+                            "FLOAT" , type.toString(), valueToken.getLineNumber() + 1);
                 }
 
-                if (valueToken.getType() != Lexer.TokenType.CHAR_CONST)
-                    throw new InvalidTypeException(
-                            valueToken.getType().toString(), "char", valueToken.getLineNumber());
-
-                symbolTable.get(idToken.getValue()).value = valueToken.getValue();
+                break;
             }
-            case BOOL: {
-                if (valueToken.getType() == Lexer.TokenType.ID) {
-                    setAttributeIdToken(idToken, valueToken, Lexer.TokenType.BOOL);
-                    return;
-                }
-
-                if (valueToken.getType() != Lexer.TokenType.BOOL_CONST)
-                    throw new InvalidTypeException(
-                            valueToken.getType().toString(), "bool", valueToken.getLineNumber());
-
-                symbolTable.get(idToken.getValue()).value = Boolean.valueOf(valueToken.getValue());
+            case FLOAT:{
+                currentSymbol.value = Float.parseFloat(valueToken.getValue());
+                break;
             }
-            default:
-                throw new IllegalArgumentException("Unexpected var type");
+            case STR:{
+                if (valueToken.getType() != TokenType.STR_CONST)
+                    throw new InvalidTypeException(
+                            valueToken.getType().toString(), type.toString(), valueToken.getLineNumber() + 1);
+
+                currentSymbol.value = setCharactersValue(valueToken);
+                break;
+            }
+            case CHAR:{
+                if (valueToken.getType() != TokenType.CHAR_CONST)
+                    throw new InvalidTypeException(
+                            valueToken.getType().toString(), type.toString(), valueToken.getLineNumber() + 1);
+
+                String value = setCharactersValue(valueToken);
+
+                if (value.length() > 1)
+                    throw new InvalidTypeException(
+                            valueToken.getType().toString(), type.toString(), valueToken.getLineNumber() + 1);
+
+                currentSymbol.value = (value.length() == 0) ? Character.MIN_VALUE : value.charAt(0);
+                break;
+            }
+            case BOOL:{
+                currentSymbol.value = Boolean.valueOf(valueToken.getValue());
+                break;
+            }
         }
     }
 
-    private static void setAttributeIdToken(Lexer.Token idToken,
-                                     Lexer.Token otherIdToken,
-                                     Lexer.TokenType expectedType) throws InvalidTypeException {
-        Lexer.TokenType otherIdTokenType = symbolTable.get(otherIdToken.getValue()).type;
+    private static String setCharactersValue(Token valueToken) {
+        String value = valueToken.getValue().substring(1, valueToken.getValue().length() - 1);
+        Map<String, String> tokens = new HashMap<>();
+        tokens.put("\\n", "\n");
+        tokens.put("\\t", "\t");
+        tokens.put("\\\"", "\"");
+        tokens.put("\\'", "'");
+        tokens.put("\\\\", "\\\\");
 
-        if (otherIdTokenType != expectedType)
+        Pattern pattern = Pattern.compile("\\\\n|\\\\t|\\\\\"|\\\\'|\\\\\\\\");
+        Matcher matcher = pattern.matcher(value);
+
+        StringBuilder stringBuilder = new StringBuilder();
+        while (matcher.find()) {
+            String matched = matcher.group();
+            matcher.appendReplacement(stringBuilder, tokens.get(matched));
+
+        }
+        matcher.appendTail(stringBuilder);
+
+        return stringBuilder.toString();
+    }
+
+    private static void setValueIdToken(ScopeNode currentNode, Token idToken, Token otherIdToken, TokenType expectedType)
+            throws InvalidTypeException, VariableUndefinedException {
+        Symbol otherSymbol;
+
+        if (otherIdToken.getValue().equals(idToken.getValue())
+                && otherIdToken.getLineNumber() == idToken.getLineNumber()) {
+            otherSymbol = getTokenTraversal(currentNode.getParent(), otherIdToken)
+                    .getSymbolTable().get(otherIdToken.getValue());
+        } else {
+            otherSymbol = getTokenTraversal(currentNode, otherIdToken).getSymbolTable().get(otherIdToken.getValue());
+        }
+        
+        if (otherSymbol == null) {
+            throw new VariableUndefinedException(otherIdToken.getValue(), otherIdToken.getLineNumber() + 1);
+        }
+
+        if (otherSymbol.type != expectedType)
             throw new InvalidTypeException(
-                    otherIdTokenType.toString(),
-                    expectedType.toString(),
-                    otherIdToken.getLineNumber());
+                    otherSymbol.type.toString(), expectedType.toString(), otherSymbol.lineNumber + 1);
 
-        symbolTable.get(idToken.getValue()).value =
-                symbolTable.get(otherIdToken.getValue()).value;
+        currentNode.getSymbolTable().get(idToken.getValue()).value = otherSymbol.value;
+    }
+
+    public static String getOutputLog() {
+        Queue<ScopeNode> scopeNodeQueue = new ArrayDeque<>();
+        StringBuilder stringBuilder = new StringBuilder();
+        scopeNodeQueue.add(root);
+
+        while (!scopeNodeQueue.isEmpty()) {
+            ScopeNode currentScopeNode = scopeNodeQueue.remove();
+
+            stringBuilder.append(String.format("\n<=== %s ===>\n", (currentScopeNode.getParent() == null
+                    ? currentScopeNode
+                    : currentScopeNode + " Parent > " + currentScopeNode.getParent())));
+            stringBuilder.append(PrettyPrintingMap.getMapString(currentScopeNode.getSymbolTable())).append('\n');
+
+            scopeNodeQueue.addAll(currentScopeNode.getChildren());
+        }
+
+        return stringBuilder.toString();
+    }
+
+    public static void clear() {
+        currentNode = root;
+        root.getSymbolTable().clear();
+        root.getChildren().clear();
     }
 }

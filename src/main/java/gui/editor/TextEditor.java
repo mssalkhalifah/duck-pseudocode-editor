@@ -13,6 +13,7 @@ import java.awt.*;
 public final class TextEditor {
     private final JPanel jPanel;
     private final RSyntaxTextArea SYNTAX_TEXT_AREA;
+    private final Console console;
 
     public TextEditor() {
         this.jPanel = new JPanel(new GridBagLayout());
@@ -50,9 +51,9 @@ public final class TextEditor {
         this.jPanel.add(consoleShortcuts.getConsoleShortcutPanel(), gridBagConstraints);
 
         // Console
-        Console console = new Console();
+        console = new Console();
         gridBagConstraints.fill = GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 0.4;
+        gridBagConstraints.weightx = 0.5;
         gridBagConstraints.weighty = 1.0;
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
@@ -67,6 +68,10 @@ public final class TextEditor {
 
     public String getCurrentSourceCode() {
         return this.SYNTAX_TEXT_AREA.getText();
+    }
+
+    public Console getConsole() {
+        return console;
     }
 
     private void setConsolePanelCollapsable(JComponent panelCollapsable, JButton collapseButton) {

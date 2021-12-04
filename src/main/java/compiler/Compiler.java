@@ -3,6 +3,7 @@ package compiler;
 import compiler.exceptions.scanner.UnrecognizedCharacterException;
 import compiler.exceptions.semantic.InvalidTypeException;
 import compiler.exceptions.semantic.VariableDefinedException;
+import compiler.exceptions.semantic.VariableUndefinedException;
 import compiler.lexer.Lexer;
 import compiler.lexer.Lexer.Token;
 import compiler.lexer.Lexer.TokenType;
@@ -18,6 +19,7 @@ public final class Compiler {
     private final Lexer lexer;
     private final GrxParser parser;
     private final StringBuilder lexerLogger;
+    private String scopeOutputLog;
     private final HashMap<String, Integer> grxTokens;
 
     public Compiler(String sourceProgram) {
@@ -25,29 +27,73 @@ public final class Compiler {
         this.parser = new GrxParser();
         this.lexerLogger = new StringBuilder();
         this.grxTokens = GrxTokenGenerator.generate();
+        this.scopeOutputLog = "";
     }
 
     public String getLexerLogs() {
         return lexerLogger.toString();
     }
 
+    public String getScopeOutputLog() {
+        return scopeOutputLog;
+    }
+
     public void compile() {
-        Token token = null;
+        Token token;
         try {
             do {
                 token = lexer.yylex();
-
-                if (token.getType() == TokenType.ID) SymbolTable.addSymbol(token);
-
                 lexerLogger.append(token).append('\n');
-                int grxToken = grxTokens.get(token.getType().toString());
-
-                parser.parse(grxToken, token);
+                parser.parse(grxTokens.get(token.getType().toString()), token);
+                handleScopes(token);
             } while (token.getType() != TokenType.ENDINPUT);
-        } catch (IOException | UnrecognizedCharacterException | VariableDefinedException | InvalidTypeException e) {
-            e.printStackTrace();
-        } catch (RuntimeException e) {
-            System.err.printf("Syntax error: %s\n", token);
+            System.out.println(lexerLogger);
+            System.out.println(SymbolTable.getOutputLog());
+        } catch (IOException
+                | UnrecognizedCharacterException
+                | VariableDefinedException
+                | InvalidTypeException
+                | VariableUndefinedException
+                | RuntimeException e) {
+            System.err.println("[ERROR] " + e.getMessage());
+        }
+        finally {
+            this.scopeOutputLog = SymbolTable.getOutputLog();
+            SymbolTable.clear();
+        }
+    }
+
+    private void handleScopes(Token token) {
+        int scopeStartLine = token.getLineNumber() + 1;
+        switch (token.getType()) {
+            case WHILE:{
+                SymbolTable.addScope("While " + scopeStartLine);
+                break;
+            }
+            case DO:{
+                SymbolTable.addScope("Do " + scopeStartLine);
+                break;
+            }
+            case FOR:{
+                SymbolTable.addScope("For " + scopeStartLine);
+                break;
+            }
+            case IF:{
+                SymbolTable.addScope("If " + scopeStartLine);
+                break;
+            }
+            case ELSE:{
+                SymbolTable.exitCurrentScope();
+                SymbolTable.addScope("Else " + scopeStartLine);
+                break;
+            }
+            case ENDO:
+            case ENDFOR:
+            case ENDWHILE:
+            case ENIF: {
+                SymbolTable.exitCurrentScope();
+                break;
+            }
         }
     }
 }

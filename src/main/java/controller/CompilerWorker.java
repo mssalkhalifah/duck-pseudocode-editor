@@ -16,24 +16,25 @@ public final class CompilerWorker extends SwingWorker<Void, Void> {
 
     @Override
     protected Void doInBackground() {
-        System.out.println("Tokenizing source program...\n");
         this.compiler.compile();
 
-        try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("Sample_Table.txt"));
-            writer.write(this.compiler.getLexerLogs());
-            writer.close();
+        try(BufferedWriter writer = new BufferedWriter(new FileWriter("scope_output.txt"))) {
+            writer.write(this.compiler.getScopeOutputLog());
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        System.out.println(this.compiler.getLexerLogs());
+        try(BufferedWriter writer = new BufferedWriter(new FileWriter("Sample_Table.txt"))) {
+            writer.write(this.compiler.getLexerLogs());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         return null;
     }
 
     @Override
     protected void done() {
-        System.out.println("\nLexer done.");
         super.done();
     }
 }

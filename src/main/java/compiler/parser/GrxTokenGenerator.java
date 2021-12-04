@@ -1,16 +1,21 @@
 package compiler.parser;
 
+import main.EntryPoint;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
+import java.util.Objects;
 import java.util.Scanner;
 
 public final class GrxTokenGenerator {
     private GrxTokenGenerator() {}
 
     public static HashMap<String, Integer> generate() {
-        String path = "src/main/resources/Grammax/GrxParser.java";
+        String path = Objects.requireNonNull(
+                EntryPoint.class.getClassLoader().getResource("Grammax/GrxParser.java")).getPath();
+        //String path = "src/main/resources/Grammax/GrxParser.java";
         HashMap<String, Integer> grxTokens = new HashMap<>();
 
         try(FileInputStream fileInputStream = new FileInputStream(path)) {

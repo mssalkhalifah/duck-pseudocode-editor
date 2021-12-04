@@ -7,9 +7,10 @@ import java.awt.*;
 
 public final class Console {
     private final JScrollPane scrollPane;
+    private final JTextArea consoleTextArea;
 
     public Console() {
-        JTextArea consoleTextArea = new JTextArea();
+        consoleTextArea = new JTextArea();
         consoleTextArea.setLineWrap(true);
         consoleTextArea.setEditable(false);
         consoleTextArea.setBackground(Color.DARK_GRAY);
@@ -23,5 +24,9 @@ public final class Console {
 
     public JScrollPane getConsole() {
         return this.scrollPane;
+    }
+
+    public JTextArea getConsoleTextArea() {
+        return consoleTextArea;
     }
 }

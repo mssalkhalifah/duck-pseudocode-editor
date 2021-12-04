@@ -1,5 +1,7 @@
 package compiler.parser;
 
+import main.EntryPoint;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.*;
@@ -9,7 +11,9 @@ public final class GrxParserTableFactory {
     private GrxParserTableFactory() {}
 
     public static List<Integer> build(String tableType) {
-        String path = "src/main/resources/Grammax/GrxParser.java";
+        String path = Objects.requireNonNull(
+                EntryPoint.class.getClassLoader().getResource("Grammax/GrxParser.java")).getPath();
+        //String path = "src/main/resources/Grammax/GrxParser.java";
 
         try(FileInputStream fileInputStream = new FileInputStream(path)) {
             Scanner scanner = new Scanner(fileInputStream);

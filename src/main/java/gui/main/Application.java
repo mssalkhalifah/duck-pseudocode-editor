@@ -41,6 +41,7 @@ public final class Application {
 
     private void initializeActionEvents() {
         this.APP_MENU_BAR.getRunButton().addActionListener(actionEvent -> {
+            this.TEXT_EDITOR.getConsole().getConsoleTextArea().setText("");
             String sourceCode = this.TEXT_EDITOR.getCurrentSourceCode();
             CompilerWorker compilerWorker = new CompilerWorker(sourceCode);
             compilerWorker.execute();
