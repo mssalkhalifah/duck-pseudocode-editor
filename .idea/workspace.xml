@@ -4,124 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf08abb3-9b8b-4bcd-9ac4-ff71b3f7e4e7" name="Changes" comment="Added a unary op support">
-      <change afterPath="$PROJECT_DIR$/src/main/java/compiler/exceptions/semantic/VariableUndefinedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/compiler/symboltable/ScopeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/compiler/symboltable/Symbol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/PrettyPrintingMap.java" afterDir="false" />
+    <list default="true" id="cf08abb3-9b8b-4bcd-9ac4-ff71b3f7e4e7" name="Changes" comment="Added a CLR parser">
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_17_21__5_47_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_17_21__5_47_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_11_2021_AD__7_36_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_11_2021_AD__7_36_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sample_Table.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sample_Table.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/Compiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/Compiler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$15.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$16.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$17.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$18.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$19.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$20.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$21.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$22.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$23.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$23.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$24.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$24.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$25.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$25.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$26.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$26.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$27.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$27.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$28.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$28.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$29.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$29.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$30.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$30.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$31.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$31.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$32.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$32.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$33.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$33.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$34.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$34.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$35.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$35.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$36.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$36.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$37.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$37.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$38.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$38.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$39.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$39.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$40.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$40.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$41.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$41.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$42.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$42.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$43.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$43.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$44.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$44.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$45.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$45.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$46.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$46.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$47.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$47.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$48.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$48.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$49.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$49.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$50.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$50.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$51.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$51.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$52.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$52.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$53.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$53.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$54.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$54.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$55.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$55.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$56.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$56.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$57.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$57.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$58.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$58.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$59.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$59.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$60.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$60.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$61.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$61.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$62.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$62.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$63.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$63.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$Reductor.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$Reductor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$StackEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser$StackEntry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParserTableFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxParserTableFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxTokenGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/compiler/parser/GrxTokenGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/CompilerWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/CompilerWorker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/console/Console.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gui/console/Console.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/editor/TextEditor.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gui/editor/TextEditor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gui/main/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gui/main/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/tests/parser/ParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/tests/parser/ParserTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/tests.parser.ParserTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/tests.parser.ParserTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/tests.parser.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/tests.parser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/Grammax/GrxParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/Grammax/GrxParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/Grammax/GrxParser_debug.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/Grammax/GrxParser_debug.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/Grammax/duck_grammer.grx" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/Grammax/duck_grammer.grx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-tests.parser.ParserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-tests.parser.ParserTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/compiler/Compiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compiler/Compiler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/compiler/parser/GrxParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compiler/parser/GrxParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/compiler/parser/GrxParserTableFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compiler/parser/GrxParserTableFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/compiler/parser/GrxTokenGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compiler/parser/GrxTokenGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/compiler/symboltable/SymbolTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compiler/symboltable/SymbolTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CompilerWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CompilerWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/console/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/console/Console.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/editor/TextEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/editor/TextEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/main/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/main/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Grammax/GrxParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Grammax/GrxParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Grammax/GrxParser_debug.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Grammax/GrxParser_debug.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Grammax/duck_grammer.grx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Grammax/duck_grammer.grx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/parser/ParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/parser/ParserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/parser/source_program" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/parser/source_program" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,9 +214,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.EntryPoint" />
         <item itemvalue="Gradle.ParserTest.parseTest" />
         <item itemvalue="Gradle.duck-pseudocode-editor [uberJar]" />
-        <item itemvalue="Application.EntryPoint" />
         <item itemvalue="Gradle.RecognizerTest" />
         <item itemvalue="Gradle.RecognizerTest.testNumberRecognizer" />
       </list>
@@ -476,14 +376,14 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/compiler/symboltable/SymbolTable.java</url>
           <line>29</line>
-          <properties class="compiler.symboltable.SymbolTable">
+          <properties class="compiler.symboltable.SymbolTable" method="exitCurrentScope">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/compiler/symboltable/SymbolTable.java</url>
-          <line>185</line>
+          <line>186</line>
           <properties class="compiler.symboltable.SymbolTable">
             <option name="EMULATED" value="true" />
           </properties>
@@ -492,7 +392,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/compiler/parser/GrxParser.java</url>
           <line>90</line>
-          <properties method="reduce">
+          <properties>
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="90" />
@@ -500,7 +400,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/compiler/parser/GrxParser.java</url>
           <line>346</line>
-          <properties method="reduce">
+          <properties>
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="91" />
@@ -514,7 +414,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/duck_pseudocode_editor$RecognizerTest_testIdRecognizer.ic" NAME="RecognizerTest.testIdRecognizer Coverage Results" MODIFIED="1634669419580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/duck_pseudocode_editor$ParserTest_parseTest.ic" NAME="ParserTest.parseTest Coverage Results" MODIFIED="1638455747584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/duck_pseudocode_editor$RecognizerTest_testIdRecognizer.ic" NAME="RecognizerTest.testIdRecognizer Coverage Results" MODIFIED="1634669419580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
