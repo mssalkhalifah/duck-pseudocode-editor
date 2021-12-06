@@ -407,7 +407,7 @@ public class Lexer {
 
     }
 
-    public final class Token {
+    public static final class Token {
 	private final TokenType TYPE;
 	private final String VALUE;
 	private final int LINE_NUMBER;

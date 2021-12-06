@@ -1197,11 +1197,7 @@ public final class GrxParser {
                 _grx_stack.pop();
                 _grx_stack.pop();
                 _grx_stack.pop();
-                Object v;
-                {
-                v = null; symbolTable.exitCurrentScope();
-                }
-                return v;
+                return null;
             }
         },
         new Reductor() {
@@ -1217,11 +1213,7 @@ public final class GrxParser {
                 _grx_stack.pop();
                 _grx_stack.pop();
                 _grx_stack.pop();
-                Object v;
-                {
-                v = null; symbolTable.exitCurrentScope();
-                }
-                return v;
+                return null;
             }
         },
         new Reductor() {
@@ -1519,19 +1511,51 @@ public final class GrxParser {
         new Reductor() {
             @Override
             public Object reduce(Stack<StackEntry> _grx_stack) {
+                Object right = _grx_stack.pop().payload;
                 _grx_stack.pop();
-                _grx_stack.pop();
-                _grx_stack.pop();
-                return null;
+                Object left = _grx_stack.pop().payload;
+                Object v;
+                {
+                
+                  try {
+                    Token leftToken = (Token) left;
+                    Token rightToken = (Token) right;
+                    float valueLeft = Float.parseInt((leftToken.getType() == TokenType.ID) ? SymbolTable.getValue(leftToken) : leftToken.getValue());
+                    float valueRight = Float.parseInt((rightToken.getType() == TokenType.ID) ? SymbolTable.getValue(rightToken) : rightToken.getValue());
+                    float result = valueLeft + valueRight;
+                    v = new Token(TokenType.NUM_CONST, String.valueOf(result), rightToken.getLineNumber(), rightToken.getColumnNumber());
+                  } catch(NumberFormatException e) {
+                    Token invalidToken = (leftToken.getType() == TokenType.NUM_CONST) ? rightToken : leftToken;
+                    throw new InvalidTypeException(
+                      TokenType.NUM_CONST.toString(), invalidToken.getType().toString(), invalidToken.getLineNumber() + 1);
+                  }
+                }
+                return v;
             }
         },
         new Reductor() {
             @Override
             public Object reduce(Stack<StackEntry> _grx_stack) {
+                Object right = _grx_stack.pop().payload;
                 _grx_stack.pop();
-                _grx_stack.pop();
-                _grx_stack.pop();
-                return null;
+                Object left = _grx_stack.pop().payload;
+                Object v;
+                {
+                
+                  try {
+                    Token leftToken = (Token) left;
+                    Token rightToken = (Token) right;
+                    float valueLeft = Float.parseInt((leftToken.getType() == TokenType.ID) ? SymbolTable.getValue(leftToken) : leftToken.getValue());
+                    float valueRight = Float.parseInt((rightToken.getType() == TokenType.ID) ? SymbolTable.getValue(rightToken) : rightToken.getValue());
+                    float result = valueLeft - valueRight;
+                    v = new Token(TokenType.NUM_CONST, String.valueOf(result), rightToken.getLineNumber(), rightToken.getColumnNumber());
+                  } catch(NumberFormatException e) {
+                    Token invalidToken = (leftToken.getType() == TokenType.NUM_CONST) ? rightToken : leftToken;
+                    throw new InvalidTypeException(
+                      TokenType.NUM_CONST.toString(), invalidToken.getType().toString(), invalidToken.getLineNumber() + 1);
+                  }
+                }
+                return v;
             }
         },
         new Reductor() {
@@ -1548,28 +1572,78 @@ public final class GrxParser {
         new Reductor() {
             @Override
             public Object reduce(Stack<StackEntry> _grx_stack) {
+                Object right = _grx_stack.pop().payload;
                 _grx_stack.pop();
-                _grx_stack.pop();
-                _grx_stack.pop();
-                return null;
+                Object left = _grx_stack.pop().payload;
+                Object v;
+                {
+                
+                  try {
+                    Token leftToken = (Token) left;
+                    Token rightToken = (Token) right;
+                    float valueLeft = Float.parseInt((leftToken.getType() == TokenType.ID) ? SymbolTable.getValue(leftToken) : leftToken.getValue());
+                    float valueRight = Float.parseInt((rightToken.getType() == TokenType.ID) ? SymbolTable.getValue(rightToken) : rightToken.getValue());
+                    float result = valueLeft * valueRight;
+                    v = new Token(TokenType.NUM_CONST, String.valueOf(result), rightToken.getLineNumber(), rightToken.getColumnNumber());
+                  } catch(NumberFormatException e) {
+                    Token invalidToken = (leftToken.getType() == TokenType.NUM_CONST) ? rightToken : leftToken;
+                    throw new InvalidTypeException(
+                      TokenType.NUM_CONST.toString(), invalidToken.getType().toString(), invalidToken.getLineNumber() + 1);
+                  }    
+                }
+                return v;
             }
         },
         new Reductor() {
             @Override
             public Object reduce(Stack<StackEntry> _grx_stack) {
+                Object right = _grx_stack.pop().payload;
                 _grx_stack.pop();
-                _grx_stack.pop();
-                _grx_stack.pop();
-                return null;
+                Object left = _grx_stack.pop().payload;
+                Object v;
+                {
+                
+                  try {
+                    Token leftToken = (Token) left;
+                    Token rightToken = (Token) right;
+                    float valueLeft = Float.parseInt((leftToken.getType() == TokenType.ID) ? SymbolTable.getValue(leftToken) : leftToken.getValue());
+                    float valueRight = Float.parseInt((rightToken.getType() == TokenType.ID) ? SymbolTable.getValue(rightToken) : rightToken.getValue());
+                    float result = valueLeft / valueRight;
+                    v = new Token(TokenType.NUM_CONST, String.valueOf(result), rightToken.getLineNumber(), rightToken.getColumnNumber());
+                  } catch(NumberFormatException e) {
+                    Token invalidToken = (leftToken.getType() == TokenType.NUM_CONST) ? rightToken : leftToken;
+                    throw new InvalidTypeException(
+                      TokenType.NUM_CONST.toString(), invalidToken.getType().toString(), invalidToken.getLineNumber() + 1);
+                  } catch(Exception e) {
+                    System.err.out(e.getMessage());
+                  }
+                }
+                return v;
             }
         },
         new Reductor() {
             @Override
             public Object reduce(Stack<StackEntry> _grx_stack) {
+                Object right = _grx_stack.pop().payload;
                 _grx_stack.pop();
-                _grx_stack.pop();
-                _grx_stack.pop();
-                return null;
+                Object left = _grx_stack.pop().payload;
+                Object v;
+                {
+                
+                  try {
+                    Token leftToken = (Token) left;
+                    Token rightToken = (Token) right;
+                    float valueLeft = Float.parseInt((leftToken.getType() == TokenType.ID) ? SymbolTable.getValue(leftToken) : leftToken.getValue());
+                    float valueRight = Float.parseInt((rightToken.getType() == TokenType.ID) ? SymbolTable.getValue(rightToken) : rightToken.getValue());
+                    float result = valueLeft % valueRight;
+                    v = new Token(TokenType.NUM_CONST, String.valueOf(result), rightToken.getLineNumber(), rightToken.getColumnNumber());
+                  } catch(NumberFormatException e) {
+                    Token invalidToken = (leftToken.getType() == TokenType.NUM_CONST) ? rightToken : leftToken;
+                    throw new InvalidTypeException(
+                      TokenType.NUM_CONST.toString(), invalidToken.getType().toString(), invalidToken.getLineNumber() + 1);
+                  }
+                }
+                return v;
             }
         },
         new Reductor() {
@@ -1640,7 +1714,7 @@ public final class GrxParser {
         new Reductor() {
             @Override
             public Object reduce(Stack<StackEntry> _grx_stack) {
-                Object exp = _grx_stack.pop().payload;
+                Token exp = (Token)_grx_stack.pop().payload;
                 Object v;
                 {
                 v = exp;

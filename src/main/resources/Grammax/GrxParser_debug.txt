@@ -40,22 +40,22 @@ Grammar:
 Sprogram' -> <63> program;
  per_def_func -> <11> OUT OPENPA expr CLOSEPA SEMICOL;
  add_expr -> <42> mult_expr(exp)    { v = exp; }
-           | <43> add_expr PLUS mult_expr
-           | <44> add_expr SUB mult_expr;
+           | <43> add_expr(left) PLUS mult_expr(right)    {    try {     Token leftToken = (Token) left;     Token rightToken = (Token) right;     float valueLeft = Float.parseInt((leftToken.getType() == TokenType.ID) ? SymbolTable.getValue(leftToken) : leftToken.getValue());     float valueRight = Float.parseInt((rightToken.getType() == TokenType.ID) ? SymbolTable.getValue(rightToken) : rightToken.getValue());     float result = valueLeft + valueRight;     v = new Token(TokenType.NUM_CONST, String.valueOf(result), rightToken.getLineNumber(), rightToken.getColumnNumber());   } catch(NumberFormatException e) {     Token invalidToken = (leftToken.getType() == TokenType.NUM_CONST) ? rightToken : leftToken;     throw new InvalidTypeException(       TokenType.NUM_CONST.toString(), invalidToken.getType().toString(), invalidToken.getLineNumber() + 1);   }  }
+           | <44> add_expr(left) SUB mult_expr(right)    {    try {     Token leftToken = (Token) left;     Token rightToken = (Token) right;     float valueLeft = Float.parseInt((leftToken.getType() == TokenType.ID) ? SymbolTable.getValue(leftToken) : leftToken.getValue());     float valueRight = Float.parseInt((rightToken.getType() == TokenType.ID) ? SymbolTable.getValue(rightToken) : rightToken.getValue());     float result = valueLeft - valueRight;     v = new Token(TokenType.NUM_CONST, String.valueOf(result), rightToken.getLineNumber(), rightToken.getColumnNumber());   } catch(NumberFormatException e) {     Token invalidToken = (leftToken.getType() == TokenType.NUM_CONST) ? rightToken : leftToken;     throw new InvalidTypeException(       TokenType.NUM_CONST.toString(), invalidToken.getType().toString(), invalidToken.getLineNumber() + 1);   }  };
  expr_stmt -> <12> expr SEMICOL
             | <13> SEMICOL;
  expr -> <21> assign_expr(exp)    { v = exp; };
  program -> <0> STARTINPUT COLON compound_stmt ENDINPUT;
  logical_or_expr -> <30> logical_and_expr(exp)    { v = exp; }
                   | <31> logical_or_expr(orExp) OR logical_and_expr(andExp)    { v = null; };
- select_stmt -> <14> IF OPENPA expr CLOSEPA COLON compound_stmt ENIF    { v = null; symbolTable.exitCurrentScope(); }
-              | <15> IF OPENPA expr CLOSEPA COLON compound_stmt ELSE COLON compound_stmt ENIF    { v = null; symbolTable.exitCurrentScope(); };
+ select_stmt -> <14> IF OPENPA expr CLOSEPA COLON compound_stmt ENIF
+              | <15> IF OPENPA expr CLOSEPA COLON compound_stmt ELSE COLON compound_stmt ENIF;
  unary_expr -> <55> prime_expr(exp)    { v = exp; }
              | <56> unary_op cast_expr;
  mult_expr -> <45> cast_expr(exp)    { v = exp; }
-            | <46> mult_expr MUL cast_expr
-            | <47> mult_expr DIV cast_expr
-            | <48> mult_expr MOD cast_expr;
+            | <46> mult_expr(left) MUL cast_expr(right)    {    try {     Token leftToken = (Token) left;     Token rightToken = (Token) right;     float valueLeft = Float.parseInt((leftToken.getType() == TokenType.ID) ? SymbolTable.getValue(leftToken) : leftToken.getValue());     float valueRight = Float.parseInt((rightToken.getType() == TokenType.ID) ? SymbolTable.getValue(rightToken) : rightToken.getValue());     float result = valueLeft * valueRight;     v = new Token(TokenType.NUM_CONST, String.valueOf(result), rightToken.getLineNumber(), rightToken.getColumnNumber());   } catch(NumberFormatException e) {     Token invalidToken = (leftToken.getType() == TokenType.NUM_CONST) ? rightToken : leftToken;     throw new InvalidTypeException(       TokenType.NUM_CONST.toString(), invalidToken.getType().toString(), invalidToken.getLineNumber() + 1);   }      }
+            | <47> mult_expr(left) DIV cast_expr(right)    {    try {     Token leftToken = (Token) left;     Token rightToken = (Token) right;     float valueLeft = Float.parseInt((leftToken.getType() == TokenType.ID) ? SymbolTable.getValue(leftToken) : leftToken.getValue());     float valueRight = Float.parseInt((rightToken.getType() == TokenType.ID) ? SymbolTable.getValue(rightToken) : rightToken.getValue());     float result = valueLeft / valueRight;     v = new Token(TokenType.NUM_CONST, String.valueOf(result), rightToken.getLineNumber(), rightToken.getColumnNumber());   } catch(NumberFormatException e) {     Token invalidToken = (leftToken.getType() == TokenType.NUM_CONST) ? rightToken : leftToken;     throw new InvalidTypeException(       TokenType.NUM_CONST.toString(), invalidToken.getType().toString(), invalidToken.getLineNumber() + 1);   } catch(Exception e) {     System.err.out(e.getMessage());   }  }
+            | <48> mult_expr(left) MOD cast_expr(right)    {    try {     Token leftToken = (Token) left;     Token rightToken = (Token) right;     float valueLeft = Float.parseInt((leftToken.getType() == TokenType.ID) ? SymbolTable.getValue(leftToken) : leftToken.getValue());     float valueRight = Float.parseInt((rightToken.getType() == TokenType.ID) ? SymbolTable.getValue(rightToken) : rightToken.getValue());     float result = valueLeft % valueRight;     v = new Token(TokenType.NUM_CONST, String.valueOf(result), rightToken.getLineNumber(), rightToken.getColumnNumber());   } catch(NumberFormatException e) {     Token invalidToken = (leftToken.getType() == TokenType.NUM_CONST) ? rightToken : leftToken;     throw new InvalidTypeException(       TokenType.NUM_CONST.toString(), invalidToken.getType().toString(), invalidToken.getLineNumber() + 1);   }  };
  assign_expr -> <27> conditional_expr(exp)    { v = exp; }
               | <28> unary_expr(unaryExp) assign_op(assignOP) assign_expr(assignExp)    { v = SymbolTable.updateAttributes(unaryExp, assignOP, assignExp); };
  type -> <22> INT(type)    { v = type; }

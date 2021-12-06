@@ -78,6 +78,11 @@ public class SymbolTable {
         return idToken;
     }
 
+    public static Object getValue(Token idToken) {
+        Object value = getTokenTraversal(currentNode, idToken).getSymbolTable().get(idToken.getValue()).value;
+        return value;
+    }
+
     private static ScopeNode getCurrentValidScopeNode(Token idToken) throws VariableUndefinedException {
         if (idToken.getType() != TokenType.ID) throw new IllegalArgumentException("Expected ID token");
 
@@ -103,7 +108,7 @@ public class SymbolTable {
         switch (type) {
             case INT:{
                 try {
-                    currentSymbol.value = Integer.parseInt(valueToken.getValue());
+                    currentSymbol.value = Integer.parseInt(String.valueOf((int) Float.parseFloat(valueToken.getValue())));
                 } catch (NumberFormatException e) {
                     throw new InvalidTypeException(
                             "FLOAT" , type.toString(), valueToken.getLineNumber() + 1);
