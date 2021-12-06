@@ -111,7 +111,8 @@ public class SymbolTable {
                     currentSymbol.value = Integer.parseInt(String.valueOf((int) Float.parseFloat(valueToken.getValue())));
                 } catch (NumberFormatException e) {
                     throw new InvalidTypeException(
-                            "FLOAT" , type.toString(), valueToken.getLineNumber() + 1);
+                            (valueToken.getType() == TokenType.NUM_CONST)
+                                    ? "FLOAT" : valueToken.getType().toString() , type.toString(), valueToken.getLineNumber() + 1);
                 }
 
                 break;
