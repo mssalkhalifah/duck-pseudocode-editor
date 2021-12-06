@@ -516,9 +516,12 @@ public final class GrxParser {
                     float result = valueLeft + valueRight;
                     v = new Token(TokenType.NUM_CONST, String.valueOf(result), rightToken.getLineNumber(), rightToken.getColumnNumber());
                   } catch(NumberFormatException e) {
-                    Token invalidToken = (leftToken.getType() == TokenType.NUM_CONST) ? rightToken : leftToken;
+                      Token invalidToken = (leftToken.getType() == TokenType.NUM_CONST
+                              || leftToken.getType() == TokenType.INT
+                              || leftToken.getType() == TokenType.FLOAT) ? rightToken : leftToken;
                     throw new InvalidTypeException(
-                      TokenType.NUM_CONST.toString(), invalidToken.getType().toString(), invalidToken.getLineNumber() + 1);
+                            invalidToken.getType().toString(),
+                            TokenType.NUM_CONST.toString(), invalidToken.getLineNumber() + 1);
                   }
                 }
                 return v;
@@ -540,9 +543,12 @@ public final class GrxParser {
                         float result = valueLeft - valueRight;
                         v = new Token(TokenType.NUM_CONST, String.valueOf(result), rightToken.getLineNumber(), rightToken.getColumnNumber());
                     } catch(NumberFormatException e) {
-                        Token invalidToken = (leftToken.getType() == TokenType.NUM_CONST) ? rightToken : leftToken;
+                        Token invalidToken = (leftToken.getType() == TokenType.NUM_CONST
+                                || leftToken.getType() == TokenType.INT
+                                || leftToken.getType() == TokenType.FLOAT) ? rightToken : leftToken;
                         throw new InvalidTypeException(
-                                TokenType.NUM_CONST.toString(), invalidToken.getType().toString(), invalidToken.getLineNumber() + 1);
+                                invalidToken.getType().toString(),
+                                TokenType.NUM_CONST.toString(), invalidToken.getLineNumber() + 1);
                     }
                 }
                 return v;
@@ -575,9 +581,12 @@ public final class GrxParser {
                         float result = valueLeft * valueRight;
                         v = new Token(TokenType.NUM_CONST, String.valueOf(result), rightToken.getLineNumber(), rightToken.getColumnNumber());
                     } catch(NumberFormatException e) {
-                        Token invalidToken = (leftToken.getType() == TokenType.NUM_CONST) ? rightToken : leftToken;
+                        Token invalidToken = (leftToken.getType() == TokenType.NUM_CONST
+                                || leftToken.getType() == TokenType.INT
+                                || leftToken.getType() == TokenType.FLOAT) ? rightToken : leftToken;
                         throw new InvalidTypeException(
-                                TokenType.NUM_CONST.toString(), invalidToken.getType().toString(), invalidToken.getLineNumber() + 1);
+                                invalidToken.getType().toString(),
+                                TokenType.NUM_CONST.toString(), invalidToken.getLineNumber() + 1);
                     }
                 }
                 return v;
@@ -599,9 +608,12 @@ public final class GrxParser {
                         float result = valueLeft / valueRight;
                         v = new Token(TokenType.NUM_CONST, String.valueOf(result), rightToken.getLineNumber(), rightToken.getColumnNumber());
                     } catch(NumberFormatException e) {
-                        Token invalidToken = (leftToken.getType() == TokenType.NUM_CONST) ? rightToken : leftToken;
+                        Token invalidToken = (leftToken.getType() == TokenType.NUM_CONST
+                                || leftToken.getType() == TokenType.INT
+                                || leftToken.getType() == TokenType.FLOAT) ? rightToken : leftToken;
                         throw new InvalidTypeException(
-                                TokenType.NUM_CONST.toString(), invalidToken.getType().toString(), invalidToken.getLineNumber() + 1);
+                                invalidToken.getType().toString(),
+                                TokenType.NUM_CONST.toString(), invalidToken.getLineNumber() + 1);
                     }
                 }
                 return v;
@@ -623,9 +635,12 @@ public final class GrxParser {
                         float result = valueLeft % valueRight;
                         v = new Token(TokenType.NUM_CONST, String.valueOf(result), rightToken.getLineNumber(), rightToken.getColumnNumber());
                     } catch(NumberFormatException e) {
-                        Token invalidToken = (leftToken.getType() == TokenType.NUM_CONST) ? rightToken : leftToken;
+                        Token invalidToken = (leftToken.getType() == TokenType.NUM_CONST
+                                || leftToken.getType() == TokenType.INT
+                                || leftToken.getType() == TokenType.FLOAT) ? rightToken : leftToken;
                         throw new InvalidTypeException(
-                                TokenType.NUM_CONST.toString(), invalidToken.getType().toString(), invalidToken.getLineNumber() + 1);
+                                invalidToken.getType().toString(),
+                                TokenType.NUM_CONST.toString(), invalidToken.getLineNumber() + 1);
                     }
                 }
                 return v;
